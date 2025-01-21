@@ -42,14 +42,14 @@ yarn preview
 ## 3. 폴더구조
 
 ```
-public/
-├── assets // 각종 이미지 소스 관리
-│   ├── font //
-│   ├── icons //
-│   ├── images //
-│   ├── model //
+public/ // 정적 파일 관리
+├── assets // 각종 이미지 소스
+│   ├── font // 커스텀 폰트 파일
+│   ├── icons // 아이콘 (svg, png)
+│   ├── images // 이미지 파일 (jpg, png 등)
+│   ├── model // 3D 이미지 파일
 src/
-├── actions //
+├── actions // 상태 관리 및 API 호출 로직 관리
 ├── app //
 │   ├── (main)
 │       └── page.tsx // 메인 페이지
