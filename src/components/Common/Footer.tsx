@@ -10,7 +10,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="flex justify-between items-center fixed bottom-0 left-0 w-full h-[257px]  px-[120px] bg-black">
+    <footer className="flex justify-between items-center w-screen h-[257px] px-[120px] z-10 bg-black">
       <div>
         <div className="flex items-center gap-[10px] w-[600px] h-[58px]">
           <Image

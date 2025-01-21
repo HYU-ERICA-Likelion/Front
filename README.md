@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## Getting Started
-
-First, run the development server:
+## 1. Setting
 
 ```bash
-npm run dev
-# or
+# Install package
+yarn install
+
+# Run dev server
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build project
+yarn build
+
+## Run Production Preview
+yarn preview
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<br> <br>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 2. Branch Convention
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### **브랜치 네이밍 규칙**
 
-## Learn More
+> - **형식**  
+>    `[이슈번호]-[작업내용]` (3-4 단어로 작업 내용을 간결히 표현)  
+>    ex) `14-admin-login-ui`
 
-To learn more about Next.js, take a look at the following resources:
+<br>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### **브랜치 종류**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **main**: 서비스 운영용 브랜치 (프로덕션 코드)
+- **develop**: 배포 전 개발 및 통합 브랜치
+- **feature**: 기능 단위 구현
+  - 예: `14-admin-login-ui`
+- **refactor**: 코드 리팩토링
+  - 예: `20-refactor-authentication`
+- **hotfix**: 배포 버전 버그 수정
+  - 예: `27-hotfix-login`
 
-## Deploy on Vercel
+<br> <br>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 3. 폴더구조
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+public/
+├── assets // 각종 이미지 소스 관리
+│   ├── font //
+│   ├── icons //
+│   ├── images //
+│   ├── model //
+src/
+├── actions //
+├── app //
+│   ├── (main)
+│       └── page.tsx // 메인 페이지
+│   └── about // 만든 이 페이지
+│   └── interview //
+│       └── page.tsx // 인터뷰 페이지
+│       └── [id] // 인터뷰 상세 페이지
+│   └── project // 프로젝트 아카이빙 페이지
+│   └── recruit // 모집 페이지
+│   ├── global.css // 전역 css 관리
+│   ├── layout // RootLayout
+│   └── not-found.tsx // 404 Not Found Page
+│       ...
+├── components // 컴포넌트 관리
+│   ├── Common // 공통 컴포넌트
+│       ...
+├── constants // 전역 상수 관리
+├── hooks // custom hook 관리
+├── store // 전역 상태 관리
+├── types // 공유 타입 관리
+├── utils // 각종 유틸 함수 관리
+```
+
+<br> <br>
+
+## 4. Commit Convention
+
+### **커밋 메시지 규칙**
+
+- 커밋 메시지는 작업의 성격을 명확히 나타내기 위해 **타입**을 사용합니다.
+  > - **형식**  
+  >   `[타입]: 작업 내용 (#이슈번호)`
+
+<br>
+
+### **커밋 타입**
+
+- feat: 기능 구현 또는 새로운 기능 추가
+- fix: 버그 및 오류 수정
+- setting: 빌드수행, 패키지 설치, 환경 설정 수정 등
+- style: CSS 파일 위주의 UI 작업
+- docs: README.md 작성, 주석 작성 등 문서 관련 작업
+- refactor: 코드 리팩토링 (기능 변화 없이 코드 개선)
+- chore: 기타 작업
+
+<br>
+
+### **커밋 메시지 작성 예시**
+
+```bash
+feat: 어드민 로그인 UI 구현 (#14)
+```
