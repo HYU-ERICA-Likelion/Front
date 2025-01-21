@@ -8,13 +8,15 @@ export default {
   ],
   theme: {
     extend: {
-      theme: {
-        colors: {
-          primary: "#F08314",
-          gray4: "#474343",
-          gray5: "#5A5858",
-          background: "#292725",
-        },
+      colors: {
+        primary: "#F08314",
+        gray4: "#474343",
+        gray5: "#5A5858",
+        background: "#292725",
+        black: "#000000",
+      },
+      fontFamily: {
+        pretendard: ["var(--font-pretendard)"],
       },
     },
   },
