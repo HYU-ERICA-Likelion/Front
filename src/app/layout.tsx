@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import NavigationHeader from "@/components/Common/NavigationHeader";
 
 export const metadata: Metadata = {
   title: "멋쟁이사자처럼 :: 한양대 에리카",
@@ -13,7 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <body>
+        <NavigationHeader />
+        {children}
+      </body>
     </html>
   );
 }
