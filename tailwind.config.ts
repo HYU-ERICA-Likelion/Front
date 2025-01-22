@@ -14,6 +14,8 @@ export default {
         gray5: "#5A5858",
         background: "#292725",
         black: "#000000",
+        white: "#ffffff",
+        subWhite: "#cfcfcf",
       },
       fontFamily: {
         pretendard: ["var(--font-pretendard)"],
