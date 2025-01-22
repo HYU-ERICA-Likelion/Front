@@ -2,7 +2,7 @@
 name: Configuration
 about: 개발 환경 설정
 title: ""
-labels: "Configuration"
+labels: ["Configuration"]
 ---
 
 ## Description
