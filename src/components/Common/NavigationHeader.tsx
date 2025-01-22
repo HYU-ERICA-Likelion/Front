@@ -14,7 +14,10 @@ export default function NavigationHeader() {
   return (
     <header className="w-dvw h-[101px] flex justify-center items-center ">
       <div className="flex justify-between items-center w-[1040px] h-[58px]">
-        <div className="flex items-center gap-[10px] w-[600px] h-[58px]">
+        <Link
+          href="/"
+          className="flex items-center gap-[10px] w-[600px] h-[58px] cursor-pointer"
+        >
           <Image
             src="/assets/icons/horizontal-logo.svg"
             alt="logo"
@@ -30,7 +33,7 @@ export default function NavigationHeader() {
           <strong className="text-[26px] font-bold text-[white] tracking-[-0.5%]">
             HANYANG UNIV.
           </strong>
-        </div>
+        </Link>
 
         <div className="w-[316px] flex gap-10">
           <Link
