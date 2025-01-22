@@ -2,7 +2,7 @@
 name: Docs
 about: 문서 작업
 title: ""
-labels: ["Docs"]
+labels: ["📃 Docs"]
 ---
 
 ## Description

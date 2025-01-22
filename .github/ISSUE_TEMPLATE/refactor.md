@@ -2,7 +2,7 @@
 name: Refactor
 about: 코드 리팩토링
 title: ""
-labels: ["Refactor"]
+labels: ["🔨 Refactor"]
 ---
 
 ## Description

@@ -2,7 +2,7 @@
 name: Feature
 about: 기능 개발
 title: ""
-labels: ["Feature"]
+labels: ["✨ Feature"]
 ---
 
 ## Description

@@ -2,7 +2,7 @@
 name: BugFix
 about: 오류 및 버그 수정
 title: ""
-labels: ["BugFix"]
+labels: ["🐞 BugFix"]
 ---
 
 ## Description
