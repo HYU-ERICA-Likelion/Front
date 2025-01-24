@@ -60,8 +60,8 @@ export default function FAQ() {
             >
               <div className="flex items-center justify-between">
                 <p className="text-primary text-[24px] font-bold">
-                  Q.{" "}
-                  <span className="text-white text-[24px] font-[600] ml-[16px]">
+                  Q.
+                  <span className="text-white text-[24px] font-[600] ml-[17px]">
                     {question.question}
                   </span>
                 </p>
@@ -88,7 +88,7 @@ export default function FAQ() {
                   <p className="text-primary text-[24px] font-bold mt-[33px]">
                     A.
                   </p>
-                  <span className="text-white text-[24px] font-[500] mt-[33px] ml-[16px]">
+                  <span className="text-white text-[24px] font-[500] mt-[33px] ml-[17px]">
                     {question.answer}
                   </span>
                 </div>
