@@ -12,7 +12,7 @@ export default function FAQ() {
     {
       question: "회비는 얼마인가요?",
       answer:
-        "멋쟁이 사자처럼 ERICA 13기 회비는 5만원입니다! (4만 원 + 보증금 만 원)",
+        "멋쟁이 사자처럼 ERICA 13기 회비는 5만원입니다! (4만 원 + 보증금 1만 원)",
     },
     {
       question: "2학기에도 아기사자를 모집하나요?",
