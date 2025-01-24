@@ -1,7 +1,7 @@
 export default function RecruitSchedule() {
   const contents = [
     {
-      schedule: "2.5~2.21",
+      schedule: "2.7~2.21",
       title: "서류 모집",
     },
     {
