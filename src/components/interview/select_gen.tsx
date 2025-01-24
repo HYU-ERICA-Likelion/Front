@@ -8,7 +8,7 @@ export default function InterviewSelectGen({
   setSelectedGen,
 }: Props) {
   return (
-    <div className="flex flex-row gap-x-[16px]">
+    <div className="flex flex-row gap-x-[16px] justify-start xl:justify-start sm:justify-center">
       {["12", "13"].map((gen) => (
         <div
           key={gen}

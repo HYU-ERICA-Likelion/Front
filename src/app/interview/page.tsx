@@ -11,7 +11,10 @@ export default function InterviewPage() {
     <div className="flex flex-col items-center h-screen w-full max-w-screen">
       <div className="h-[130px]" />
       <InterviewTitle />
-      <InterviewSelectGen selectedGen={gen} setSelectedGen={setGen} />
+      <div className="h-[118px]" />
+      <div className="flex flex-col xl:w-[1040px]">
+        <InterviewSelectGen selectedGen={gen} setSelectedGen={setGen} />
+      </div>
     </div>
   );
 }
