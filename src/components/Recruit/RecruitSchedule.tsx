@@ -30,7 +30,7 @@ export default function RecruitSchedule() {
       <p className="text-center text-white text-[36px] font-bold">모집 일정</p>
 
       <div className="flex w-[1006px] h-[70px] items-center relative justify-between mt-[99px]">
-        <div className="w-[961px] h-[18px] bg-gray6 absolute "></div>
+        <div className="w-[961px] h-[18px] bg-gray6 absolute left-[23px]"></div>
         {contents.map((content, index) => {
           return (
             <div
