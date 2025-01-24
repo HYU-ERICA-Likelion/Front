@@ -25,7 +25,7 @@ export default function PartRecruit() {
     },
   ];
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col mt-[268px]">
       <strong className="text-white text-[24px] font-bold text-center">
         13기 멋사가
       </strong>
@@ -42,7 +42,7 @@ export default function PartRecruit() {
               <strong className="text-left text-white text-[28px] font-bold">
                 {content.title}
               </strong>
-              <p className="text-left text-whiteTransparent text-[14px]">
+              <p className="text-left text-whiteTransparent55 text-[14px]">
                 {content.content}
               </p>
               <Image
