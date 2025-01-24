@@ -15,6 +15,7 @@ export default {
         background: "#292725",
         black: "#000000",
         white: "#ffffff",
+        whiteTransparent: "rgba(255, 255, 255, 0.55)",
         subWhite: "#cfcfcf",
       },
       fontFamily: {
