@@ -1,27 +1,11 @@
-export default function RecruitSchedule() {
-  const contents = [
-    {
-      schedule: "2.7~2.21",
-      title: "서류 모집",
-    },
-    {
-      schedule: "2.23",
-      title: "서류 합격자 발표",
-    },
-    {
-      schedule: "2.24~2.28",
-      title: "면접 진행",
-    },
-    {
-      schedule: "3.2",
-      title: "최종 합격자 발표",
-    },
-    {
-      schedule: "3.4",
-      title: "OT",
-    },
-  ];
+interface RecruitScheduleProps {
+  roads: {
+    schedule: string;
+    title: string;
+  }[];
+}
 
+export default function RecruitSchedule({ roads }: RecruitScheduleProps) {
   return (
     <div className="mt-[289px] flex- flex-col items-center">
       <p className="text-center text-white text-[24px] font-bold">
@@ -31,7 +15,7 @@ export default function RecruitSchedule() {
 
       <div className="flex w-[1006px] h-[70px] items-center relative justify-between mt-[99px]">
         <div className="w-[961px] h-[18px] bg-gray6 absolute left-[23px]"></div>
-        {contents.map((content, index) => {
+        {roads.map((road, index) => {
           return (
             <div
               key={index}
@@ -48,10 +32,10 @@ export default function RecruitSchedule() {
               </svg>
               <div className="flex flex-col items-center mt-[25px]">
                 <p className="text-whiteTransparent70 text-center text-[20px] font-bold">
-                  {content.schedule}
+                  {road.schedule}
                 </p>
                 <p className="text-white text-[26px] text-center font-bold whitespace-nowrap">
-                  {content.title}
+                  {road.title}
                 </p>
               </div>
             </div>

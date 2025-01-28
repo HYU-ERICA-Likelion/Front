@@ -28,7 +28,7 @@ export default function RecruitTitle() {
           alt="라이언"
           width={126}
           height={177}
-          className="absolute right-[230px] top-[-80px]"
+          className="absolute right-[248px] top-[-80px]"
         />
       </button>
     </div>
