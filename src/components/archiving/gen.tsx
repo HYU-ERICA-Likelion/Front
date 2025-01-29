@@ -8,7 +8,7 @@ interface Props {
     setSelectedGen,
   }: Props) {
     return (
-      <div className="flex flex-row gap-x-[16px] justify-start xl:justify-start xl:px-[122px] sm:justify-center mt-[126px]">
+      <div className="flex flex-row justify-start w-[1025.95px] gap-x-[16px] m-[126px_60px]">
         {["전체", "12기", "13기"].map((gen) => (
           <div
             key={gen}
