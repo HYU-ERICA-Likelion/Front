@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function RoadMap() {
   return (
-    <div className="w-screen h-[865px] pt-[97px]">
+    <section className="w-screen h-[865px] pt-[97px]">
       <div className="flex flex-col items-center gap-[105px]">
         <div className="flex flex-col items-center gap-[12px]">
           <strong className="w-[203px] h-[29px] text-[24px] font-bold text-white tracking-[-0.005em] text-center">
@@ -23,7 +23,7 @@ export default function RoadMap() {
               content={item.content}
             />
           ))}
-          <Image
+          <img
             src="/assets/images/404-lion.svg"
             alt="road-map-lion"
             width={185}
@@ -32,6 +32,6 @@ export default function RoadMap() {
           />
         </ul>
       </div>
-    </div>
+    </section>
   );
 }

@@ -1,6 +1,6 @@
 export default function HeroBanner() {
   return (
-    <div>
+    <section>
       <div className="relative w-screen h-[731px]">
         <div className="relative top-[151px] left-[50%] -translate-x-1/2 flex flex-col items-center gap-[28px]">
           <h3 className="flex justify-center items-center w-[235px] h-[53px] rounded-[4px] bg-primary text-[24px] font-bold text-white tracking-[-0.5%]">
@@ -11,6 +11,6 @@ export default function HeroBanner() {
           </h2>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
