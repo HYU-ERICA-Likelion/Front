@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { curriculums, curriculumsPart } from "@/constants/curriculum";
-import PartSelector from "./PartSelector";
+import TabSelector from "../../Common/TabSelector";
 import CurriculumItem from "./CurriculumItem";
 
 export default function Curriculum() {
@@ -12,13 +12,15 @@ export default function Curriculum() {
     <section className="flex flex-col items-center gap-[105px] w-screen h-[810px] pt-[100px] ">
       <div className="flex gap-[60px] w-[713px] h-[56px]">
         {curriculumsPart.map((part, idx) => (
-          <PartSelector
+          <TabSelector
+            width={172}
+            height={56}
             key={`curriculums-part-${idx}`}
             selectedPart={selectedPart}
             onClick={(part: string) => setSelectedPart(part)}
           >
             {part}
-          </PartSelector>
+          </TabSelector>
         ))}
       </div>
 
