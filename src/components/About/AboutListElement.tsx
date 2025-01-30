@@ -1,9 +1,9 @@
-interface InfoProps {
+interface AboutListElementProps {
     title: string;
     list: string[];
 };
 
-export default function Info({title, list}: InfoProps) {
+export default function AboutListElement({title, list}: AboutListElementProps) {
     return (
         <div className="flex justify-between itmes-center mb-4">
             <span className="flex items-start text-2xl font-medium pretendard text-whiteTransparent55 w-80 pr-1 h-8">
