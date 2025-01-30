@@ -11,7 +11,7 @@ export default function AboutListElement({title, list}: AboutListElementProps) {
             </span>
             <div className="flex-col items-center justify-start">
                 {list.map((name, index) => (
-                    <span key={index} className="flex itmes-start text-2xl font-medium pretendard text-white mb-1.5 h-8">{name}</span>
+                    <span key={index} className="flex itmes-start text-2xl font-medium pretendard text-white mb-1.5 h-8 w-40">{name}</span>
                     ))
                 }
             </div>
