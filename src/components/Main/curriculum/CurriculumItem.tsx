@@ -1,6 +1,7 @@
 "use client";
 
-import { ReactNode, useEffect, useState } from "react";
+import { useVisibility } from "@/hooks/useVisibility";
+import { ReactNode } from "react";
 
 interface CurriculumItemProps {
   children: ReactNode;
@@ -13,17 +14,7 @@ export default function CurriculumItem({
   num,
   selectedPart,
 }: CurriculumItemProps) {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(false);
-
-    const timeoutId = setTimeout(() => {
-      setIsVisible(true);
-    }, 400);
-
-    return () => clearTimeout(timeoutId);
-  }, [selectedPart]);
+  const { isVisible } = useVisibility(selectedPart);
 
   return (
     <li
