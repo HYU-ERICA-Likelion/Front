@@ -30,7 +30,7 @@ export default {
         },
       },
       animation: {
-        endingCredit: "scroll 25s linear infinite",
+        endingCredit: "scroll 30s linear infinite",
       },
     },
   },
