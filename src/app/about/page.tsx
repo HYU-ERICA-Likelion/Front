@@ -1,4 +1,5 @@
 import AboutListElement from "@/components/About/AboutListElement";
+import AboutList from "@/components/About/AboutList";
 import dataList from "@/constants/about";
 
 
@@ -14,11 +15,7 @@ export default function AboutPage() {
         <div className="w-96 h-96 mr-20 bg-primary"> 
           <span>동영상 있어요!!!</span>
         </div>
-
-        <div className="flex-col items-center">
-          {dataList.map((data, index) => <AboutListElement key={index} title={data.title} list={data.list} />)}
-        </div>
-
+        <AboutList dataList={dataList} />
       </div>
     </div>
   );

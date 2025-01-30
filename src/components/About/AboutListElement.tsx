@@ -1,4 +1,4 @@
-interface AboutListElementProps {
+export interface AboutListElementProps {
     title: string;
     list: string[];
 };
