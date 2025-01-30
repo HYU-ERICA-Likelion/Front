@@ -4,11 +4,11 @@ import dataList from "@/constants/about";
 
 export default function AboutPage() {
   return (
-    <div className="flex-col justify-start items-center">
+    <div className="flex-col justify-start items-center bg-black">
       <h1 className="pretendard text-4xl font-bold text-center p-12">
         ~웹 사이트를 만든 사람들~
       </h1>
-      <div className="flex align-start justify-center overflow-y-hidden mb-12 pt-5 pb-5"> 
+      <div className="flex align-start justify-center overflow-y-hidden pt-5 pb-12"> 
         {/* content */}
         <div className="w-96 h-96 mr-8">
           <video autoPlay loop muted>
