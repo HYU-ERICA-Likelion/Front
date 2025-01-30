@@ -5,8 +5,8 @@ interface AboutListElementProps {
 
 export default function AboutListElement({title, list}: AboutListElementProps) {
     return (
-        <div className="flex justify-between itmes-center mb-4">
-            <span className="flex items-start text-2xl font-medium pretendard text-whiteTransparent55 w-80 pr-1 h-8">
+        <div className="flex justify-between itmes-center mb-2.5">
+            <span className="flex items-start text-2xl font-medium pretendard text-whiteTransparent55 w-96 pr-1 h-8">
                 {title}
             </span>
             <div className="flex-col items-center justify-start">

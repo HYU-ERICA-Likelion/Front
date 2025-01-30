@@ -15,7 +15,7 @@ export default function AboutPage() {
           <span>동영상 있어요!!!</span>
         </div>
 
-        <div className="flex-col items-center w-96">
+        <div className="flex-col items-center">
           {dataList.map((data, index) => <AboutListElement key={index} title={data.title} list={data.list} />)}
         </div>
 

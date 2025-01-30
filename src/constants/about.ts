@@ -10,7 +10,7 @@ const dataList = [
     { title: "", list: [""] },
 
     { title: "최연소 개발 천재", list: ["음상훈"] },
-    { title: "디자인의 신, 권위자, 종결자, 전설, 군림자, 제왕", list: ["오승아"] },
+    { title: "디자인의 신, 권위자, 종결자, 전설", list: ["오승아"] },
     { title: "", list: [""] },
 
     { title: "홈즈앤 루팡 알바생", list: ["이종원"] },
@@ -18,8 +18,6 @@ const dataList = [
     { title: "", list: [""] },
 
     { title: "츤데레", list: ["김현수"] },
-    { title: "", list: [""] },
-
     { title: "미녀", list: ["송가은"] },
     { title: "프로미스나인 백지헌", list: ["김예안"] },
     { title: "", list: [""] },
