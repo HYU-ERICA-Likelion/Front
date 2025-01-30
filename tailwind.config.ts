@@ -23,6 +23,15 @@ export default {
       fontFamily: {
         pretendard: ["var(--font-pretendard)"],
       },
+      keyframes: {
+        scroll: {
+          "0%": { transform: "translateY(100vh)" },
+          "100%": { transform: "translateY(-100%)" },
+        },
+      },
+      animation: {
+        endingCredit: "scroll 30s linear infinite",
+      },
     },
   },
   plugins: [],
