@@ -13,6 +13,7 @@ interface Project {
 }
 
 import Image from "next/image";
+import ArchivingModal from "./modal";
 
 export default function ProjectCards({ projectData, selectedGen }: ProjectCardsProps) 
 {
@@ -45,7 +46,9 @@ export default function ProjectCards({ projectData, selectedGen }: ProjectCardsP
             </div>
           </div>
         ))}
-      </div> 
+      </div>
+
+      <ArchivingModal/> 
     </div>   
   );
 }

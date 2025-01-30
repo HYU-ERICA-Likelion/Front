@@ -4,7 +4,6 @@ import ArchivingSelectGen from "@/components/archiving/gen";
 import ProjectCards from "@/components/archiving/card"
 import { useState } from "react";
 
-
 export default function ProjectPage() {
   const [gen, setGen] = useState<string>("전체");
   const projectData = [
@@ -41,6 +40,7 @@ export default function ProjectPage() {
       gen: 13
     }
    ];
+
   return (
     <div className="h-screen flex flex-col items-center">
       <div className="flex flex-col items-center gap-y-[12px] mt-[146px]">
@@ -49,9 +49,6 @@ export default function ProjectPage() {
       </div>
       <ArchivingSelectGen selectedGen={gen} setSelectedGen={setGen} />
       <ProjectCards projectData={projectData} selectedGen={gen} />
-      
-      
     </div>
-    
   );
 }
