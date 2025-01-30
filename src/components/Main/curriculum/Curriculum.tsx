@@ -24,28 +24,11 @@ export default function Curriculum() {
         ))}
       </div>
 
-      <div className="flex gap-[40px] w-[1002px] h-[400px]">
-        <ul className="flex flex-col gap-[20px] w-[481px] h-[400px]">
+      <div className=" ">
+        <ul className="w-[1002px] h-[400px] grid grid-flow-col grid-cols-2 grid-rows-4 gap-x-[40px] gap-y-[20px]">
           {curriculums.map(
             (curriculum) =>
-              curriculum.part === selectedPart &&
-              curriculum.id <= 4 && (
-                <CurriculumItem
-                  num={curriculum.id}
-                  key={`curriculum-${curriculum.id}`}
-                  selectedPart={selectedPart}
-                >
-                  {curriculum.content}
-                </CurriculumItem>
-              )
-          )}
-        </ul>
-        <ul className="flex flex-col gap-[20px] w-[481px] h-[400px]">
-          {curriculums.map(
-            (curriculum) =>
-              curriculum.part === selectedPart &&
-              curriculum.id >= 5 &&
-              curriculum.id <= 8 && (
+              curriculum.part === selectedPart && (
                 <CurriculumItem
                   num={curriculum.id}
                   key={`curriculum-${curriculum.id}`}
