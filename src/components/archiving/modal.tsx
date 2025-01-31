@@ -126,7 +126,7 @@ export default function ArchivingModal({ project, onClose }: ArchivingModalProps
                 <div className="text-[24px] font-semibold">{project.title}</div>
                 <div className="text-[18px] font-semibold text-white/40">{project.type}</div>
               </div>
-              <div className="text-[18px] text-white/75 h-[350px]">
+              <div className="text-[18px] text-white/75">
                 Z세대, 웰니스 중에서도 정신건강에 관심이 높아졌는데요, 하지만, Z세대의 정신건강 어떻게 채워야 할까요?
 
                 포레스트는 힐링 이미지를 통한 테라피와 Z세대의 성향에 맞춘 유쾌한 웹사이트 Therapy입니다.

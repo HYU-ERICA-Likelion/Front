@@ -33,7 +33,7 @@ export default function ProjectCards({ projectData, selectedGen }: ProjectCardsP
 
   return(
     <div className="flex flex-col items-center">
-      <div className="grid grid-cols-3 gap-[30px] pb-[200px]">
+      <div className="grid grid-cols-3 gap-[30px] pb-[309px]">
         {filteredProjects.map((project) => (
           <div 
             key={project.id}
