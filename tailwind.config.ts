@@ -25,7 +25,7 @@ export default {
       },
       keyframes: {
         scroll: {
-          "0%": { transform: "translateY(100vh)" },
+          "0%": { transform: "translateY(25%)" },
           "100%": { transform: "translateY(-100%)" },
         },
       },
