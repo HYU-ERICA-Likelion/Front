@@ -1,37 +1,49 @@
+"use client";
+
 interface Project {
   id: number;
-  image: string;
+  images: string[];
   title: string;
   description: string;
   type: string;
   gen: number;
- }
+}
 
- interface ProjectCardsProps {
+interface ProjectCardsProps {
   projectData: Project[];
   selectedGen: string;
 }
 
 import Image from "next/image";
 import ArchivingModal from "./modal";
+import { useState } from "react";
 
 export default function ProjectCards({ projectData, selectedGen }: ProjectCardsProps) 
 {
   const filteredProjects = projectData.filter((project) => 
     selectedGen === "전체" ? true : project.gen === Number(selectedGen.slice(0,-1))
   );
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleProjectClick = (project: Project) => {
+    setSelectedProject(project);
+    setIsModalOpen(!isModalOpen);
+  };
 
   return(
     <div className="flex flex-col items-center">
-      <div className="grid grid-cols-3 gap-[30px]">
+      <div className="grid grid-cols-3 gap-[30px] pb-[200px]">
         {filteredProjects.map((project) => (
-          <div key={project.id}>
+          <div 
+            key={project.id}
+            onClick={() => handleProjectClick(project)}>
             <div className="flex flex-col p-[15px_16.589px] w-[322px] h-[258px] rounded-[14px] bg-gray4">
               <Image 
                 width={288}
                 height={144}
-                className="rounded-lg bg-[#848383] object-cover" 
-                src={project.image} 
+                className="rounded-lg bg-[#848383] object-cover h-[144px]" 
+                src={project.images[0]}
                 alt={project.title} 
               />
               <div>
@@ -48,7 +60,15 @@ export default function ProjectCards({ projectData, selectedGen }: ProjectCardsP
         ))}
       </div>
 
-      <ArchivingModal/> 
+      {isModalOpen && selectedProject && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-80">
+          <ArchivingModal 
+            project={selectedProject}
+            onClose={() => setIsModalOpen(false)}
+          />
+        </div>
+      )}
     </div>   
   );
 }
