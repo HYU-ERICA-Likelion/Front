@@ -15,6 +15,7 @@ export default function AboutList({dataList}: AboutListProps) {
       className="flex-col items-center animate-endingCredit"
       onMouseDown={() => setIsPressed(true)}
       onMouseUp={() => setIsPressed(false)}
+      onMouseLeave={() => setIsPressed(false)}
       style={{ animationPlayState: isPressed ? 'paused' : 'running' }}
     >
       {dataList.map((data, index) => <AboutListElement key={index} title={data.title} list={data.list} />)}
