@@ -12,36 +12,41 @@ const interviewData = [
     name: "이종원",
     position: "대표, 프론트엔드, 백엔드",
     text: "운영진과 함께 아기사자들에게 의미 있는 동아리 활동을 만들겠습니다!",
+    id: "1",
   },
   {
     img: "/assets/images/jongwon.png",
     name: "이종원",
     position: "대표, 프론트엔드, 백엔드",
     text: "운영진과 함께 아기사자들에게 의미 있는 동아리 활동을 만들겠습니다!",
+    id: "1",
   },
   {
     img: "/assets/images/jongwon.png",
     name: "이종원",
     position: "대표, 프론트엔드, 백엔드",
     text: "운영진과 함께 아기사자들에게 의미 있는 동아리 활동을 만들겠습니다!",
+    id: "1",
   },
   {
     img: "/assets/images/jongwon.png",
     name: "이종원",
     position: "대표, 프론트엔드, 백엔드",
     text: "운영진과 함께 아기사자들에게 의미 있는 동아리 활동을 만들겠습니다!",
+    id: "1",
   },
   {
     img: "/assets/images/jongwon.png",
     name: "이종원",
     position: "대표, 프론트엔드, 백엔드",
     text: "운영진과 함께 아기사자들에게 의미 있는 동아리 활동을 만들겠습니다!",
+    id: "1",
   },
 ];
 //////////
 
 export default function InterviewPage() {
-  const [gen, setGen] = useState<string>("12");
+  const [gen, setGen] = useState<string>("13기");
   console.log(gen);
   return (
     <div className="flex flex-col items-center h-screen w-full max-w-screen">
@@ -60,6 +65,7 @@ export default function InterviewPage() {
               name={interview.name}
               position={interview.position}
               text={interview.text}
+              id={interview.id}
             />
           ))}
         </div>
