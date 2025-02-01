@@ -1,11 +1,10 @@
-import AboutListElement from "@/components/About/AboutListElement";
 import AboutList from "@/components/About/AboutList";
 import dataList from "@/constants/about";
 
 export default function AboutPage() {
   return (
     <div className="flex-col justify-start items-center bg-black">
-      <h1 className="pretendard text-4xl font-bold text-center p-12">
+      <h1 className="pretendard text-[36px] font-bold text-center p-12">
         ~웹 사이트를 만든 사람들~
       </h1>
       <div className="flex align-start justify-center overflow-y-hidden pt-5 pb-24"> 
