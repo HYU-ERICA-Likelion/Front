@@ -1,6 +1,5 @@
 import AboutList from "@/components/About/AboutList";
 import dataList from "@/constants/about";
-import Video from "@/components/About/Video";
 
 export default function AboutPage() {
   return (
@@ -11,7 +10,9 @@ export default function AboutPage() {
       <div className="flex align-start justify-center overflow-y-hidden pb-[96px]"> 
         {/* content */}
         <div className="w-[467px] h-[504px] mr-[88px]">
-          <Video />
+          <video autoPlay loop muted>
+              <source src="@/../../assets/videos/ending-credit.mp4" type="video/mp4" />
+          </video>
         </div>
         <div className="h-[504px]">
           <AboutList dataList={dataList} />
