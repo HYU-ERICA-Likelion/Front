@@ -1,24 +1,25 @@
-import Info from "@/components/About/Info";
+import AboutList from "@/components/About/AboutList";
 import dataList from "@/constants/about";
-
 
 export default function AboutPage() {
   return (
-    <div className="flex-col justify-between items-center box-border">
-      <h1 className="pretendard text-4xl font-bold text-center p-12 mb-6">
-        ~웹 사이트를 만든 사람들~
+    <div className="flex-col justify-start items-center bg-black">
+      <h1 className="pretendard text-[36px] font-bold text-center p-[180px]">
+        웹 사이트를 만든 사람들
       </h1>
-      <div className="flex align-start justify-center"> 
+      <div className="flex align-start justify-center overflow-y-hidden pb-[96px]">
         {/* content */}
-
-        <div className="w-96 h-96 mr-20 bg-primary"> 
-          <span>동영상 있어요!!!</span>
+        <div className="w-[467px] h-[504px] mr-[88px]">
+          <video autoPlay loop muted>
+            <source
+              src="@/../../assets/videos/ending-credit.mp4"
+              type="video/mp4"
+            />
+          </video>
         </div>
-
-        <div className="flex-col items-center w-96">
-          {dataList.map((data, index) => <Info key={index} title={data.title} list={data.list} />)}
+        <div className="h-[504px]">
+          <AboutList dataList={dataList} />
         </div>
-
       </div>
     </div>
   );
