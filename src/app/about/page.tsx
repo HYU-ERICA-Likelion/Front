@@ -11,7 +11,7 @@ export default function AboutPage() {
         {/* content */}
         <div className="w-[467px] h-[504px] mr-[88px]">
           <video autoPlay loop muted>
-            <source src="@/../assets/videos/ending-credit.mp4" type="video/mp4" />
+              <source src="@/../../assets/videos/ending-credit.mp4" type="video/mp4" />
           </video>
         </div>
         <div className="h-[504px]">
