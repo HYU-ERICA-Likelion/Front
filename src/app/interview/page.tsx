@@ -49,14 +49,14 @@ export default function InterviewPage() {
   const [gen, setGen] = useState<string>("13기");
   console.log(gen);
   return (
-    <div className="flex flex-col items-center h-screen w-full max-w-screen">
+    <div className="flex flex-col items-center w-full">
       <div className="h-[130px]" />
       <InterviewTitle />
       <div className="h-[118px]" />
       <div className="flex flex-col xl:w-[1040px]">
         <InterviewSelectGen selectedGen={gen} setSelectedGen={setGen} />
         <div className="h-[66px]" />
-        {/* 프로필 카드 배치 */}
+        {/* 프로필 카드 배치 max-[]*/}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
           {interviewData.map((interview, index) => (
             <InterviewCard
@@ -69,6 +69,7 @@ export default function InterviewPage() {
             />
           ))}
         </div>
+        <div className="h-[200px]" />
       </div>
     </div>
   );
