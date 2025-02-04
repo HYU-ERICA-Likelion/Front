@@ -1,9 +1,8 @@
 //Server Side
 import InterviewClient from "@/components/interview/InterviewClient";
-import { API_URL } from "@/constants/index";
 
 async function getMembers() {
-  const response = await fetch(`${API_URL}/members`);
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_KEY}/members`);
   return response.json();
 }
 

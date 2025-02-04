@@ -1,6 +1,5 @@
 import Profile from "@/components/interview/profile";
 import QnA from "@/components/interview/QnA";
-import { API_URL } from "@/constants";
 
 interface Interview {
   question: string;
@@ -18,7 +17,7 @@ async function getInterview(id: string) {
   try {
     const [gen, name] = id.split("-");
     const response = await fetch(
-      `${API_URL}/interview?name=${name}&generation=${gen}`
+      `${process.env.NEXT_PUBLIC_API_KEY}/interview?name=${name}&generation=${gen}`
     );
     if (!response.ok) throw new Error("Failed to fetch interview");
     return response.json();
