@@ -64,7 +64,7 @@ export default function Carousel() {
     <div className="relative flex flex-col justify-center items-center w-full h-[464px] mb-[44px]">
       <Slider {...settings} className="w-full mx-auto">
         {projectList.map((project, index) => (
-          <div>
+          <div key={index}>
             <SlideCard key={`project-carousel-${index}`} {...project} />
           </div>
         ))}
