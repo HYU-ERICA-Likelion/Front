@@ -1,3 +1,4 @@
+import BackButton from "@/components/interview/BackButton";
 import Profile from "@/components/interview/profile";
 import QnA from "@/components/interview/QnA";
 
@@ -38,7 +39,9 @@ export default async function Interview({
 
   return (
     <div className="flex flex-col items-center">
-      <div className="h-[129px]" />
+      <div className="h-[37px]" />
+      <BackButton />
+      <div className="h-[52px]" />
       <Profile
         img={interviewData.photoUrl}
         role={interviewData.role}
