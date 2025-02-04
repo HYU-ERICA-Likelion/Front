@@ -24,7 +24,7 @@ export default function RoadMap() {
             />
           ))}
           <img
-            src="/assets/images/404-lion.svg"
+            src="/assets/images/character/roadmap-lion.svg"
             alt="road-map-lion"
             width={185}
             height={261}

@@ -1,12 +1,14 @@
 import Image from "next/image";
 
 interface SlideCardProps {
+  title: string;
   generation: string;
   crewMembers: string[];
   imgUrl: string;
 }
 
 export default function SlideCard({
+  title,
   generation,
   crewMembers,
   imgUrl,
@@ -19,13 +21,14 @@ export default function SlideCard({
           alt="carousel-image"
           width={597}
           height={364}
+          className="rounded-[20px]"
           objectFit="cover"
         />
       </div>
 
       <div className="flex items-center gap-[8px]">
         <strong className="text-[20px] font-bold tracking-[0.005em] text-white">
-          프로젝트 명
+          {title}
         </strong>
 
         <div className="flex gap-[5px]">

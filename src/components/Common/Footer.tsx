@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Footer() {
   const handleCopyClipBoard = () => {
-    navigator.clipboard.writeText("likelion@이메일.com");
+    navigator.clipboard.writeText("hyuerica@likelion.org");
     alert("메일 주소가 복사되었습니다!");
   };
 
