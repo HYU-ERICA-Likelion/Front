@@ -20,7 +20,17 @@ export default function MainComponent({ projectData }: Projects) {
         <div className="text-[36px] font-[700]">멋사 프로젝트 둘러보기</div>
       </div>
       <ArchivingSelectGen selectedGen={gen} setSelectedGen={setGen} />
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense
+        fallback={
+          <div>
+            <img
+              src="/assets/images/loading.png"
+              alt="loading"
+              className="w-[347px] h-[249px] mb-[126px]"
+            />
+          </div>
+        }
+      >
         <div className="flex-grow">
           <ProjectCards projectData={projectData} selectedGen={gen} />
         </div>
