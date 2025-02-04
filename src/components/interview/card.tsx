@@ -1,7 +1,7 @@
 import Link from "next/link";
 
-const img1 = "/assets/images/quotes.svg";
-const img2 = "/assets/images/right-arrow.svg";
+const img1 = "/assets/icons/quotes.svg";
+const img2 = "/assets/icons/right-arrow.svg";
 
 interface Props {
   photoUrl: string;
