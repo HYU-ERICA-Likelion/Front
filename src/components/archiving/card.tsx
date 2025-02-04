@@ -7,7 +7,7 @@ interface ProjectCardsProps {
 
 import Image from "next/image";
 import ArchivingModal from "./modal";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { SubProject } from "@/types/subproject";
 
 export default function ProjectCards({
@@ -29,12 +29,20 @@ export default function ProjectCards({
     setIsModalOpen(!isModalOpen);
   };
 
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isModalOpen]);
+
   return (
     <div className="flex flex-col items-center">
       <div className="grid grid-cols-3 gap-[30px] pb-[309px]">
         {filteredProjects.map((project) => (
           <div key={project.id} onClick={() => handleProjectClick(project)}>
-            <div className="flex flex-col p-[15px_16.589px] w-[322px] h-[258px] rounded-[14px] bg-gray4">
+            <div className="cursor-pointer hover:bg-gray4/80 flex flex-col p-[15px_16.589px] w-[322px] h-[258px] rounded-[14px] bg-gray4">
               <Image
                 width={288}
                 height={144}
@@ -44,8 +52,12 @@ export default function ProjectCards({
               />
               <div>
                 <div className="flex flex-row items-center h-[24px] mt-[15px] gap-[12px]">
-                  <div className="text-[20px] font-bold">{project?.name}</div>
-                  <span className="text-white/40">{project?.type}</span>
+                  <div className="text-[18px] font-bold line-clamp-1 ">
+                    {project?.name}
+                  </div>
+                  <span className="text-[12px] text-white/40">
+                    {project?.type}
+                  </span>
                 </div>
                 <div className="break-words text-white/75 line-clamp-2 mt-[7px] text-[14px] font-medium">
                   {project?.description}
@@ -57,7 +69,7 @@ export default function ProjectCards({
       </div>
 
       {isModalOpen && selectedProject && (
-        <div className="fixed inset-0 bg-black bg-opacity-80">
+        <div className="fixed inset-0 bg-black bg-opacity-80 ">
           <ArchivingModal
             selectedProject={selectedProject}
             onClose={() => setIsModalOpen(false)}
