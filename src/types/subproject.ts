@@ -4,15 +4,17 @@ interface SubProject {
   name: string;
   description: string;
   type: string;
-  createdAt: string;
+  startDate: string;
+  endDate: string;
   deploymentUrl: string;
+  thumbnailUrl: string;
   generation: number;
   photos: { id: number; photoUrl: string }[];
   projectMembers: { name: string; role: string }[];
 }
 
 interface ArchivingModalProps {
-  sub: number;
+  selectedProject: SubProject;
   onClose: () => void;
 }
 
