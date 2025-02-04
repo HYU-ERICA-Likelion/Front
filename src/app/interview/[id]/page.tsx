@@ -17,7 +17,7 @@ async function getInterview(id: string) {
   try {
     const [gen, name] = id.split("-");
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_KEY}/interview?name=${name}&generation=${gen}`
+      `${process.env.API_URL_KEY}/interview?name=${name}&generation=${gen}`
     );
     if (!response.ok) throw new Error("Failed to fetch interview");
     return response.json();
@@ -46,7 +46,7 @@ export default async function Interview({
       />
       <div className="h-[93px]" />
       {interviewData.interviewDtoList.map(
-        (interview: Interview, index: any) => (
+        (interview: Interview, index: number) => (
           <div key={index} className="flex flex-col w-full">
             <QnA question={interview.question} answer={interview.answer} />
             <div className="h-[60px]" />

@@ -13,7 +13,7 @@ export default function NotFound() {
           className="absolute top-[17px] left-0"
         />
         <Image
-          src="/assets/images/404-lion.svg"
+          src="/assets/images/character/404-lion.svg"
           alt="404"
           width={177}
           height={249}

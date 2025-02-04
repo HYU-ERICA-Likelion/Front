@@ -12,7 +12,11 @@ export default function NavigationHeader() {
   };
 
   return (
-    <header className="w-dvw h-[101px] flex justify-center items-center ">
+    <header
+      className={`w-dvw h-[101px] flex justify-center items-center ${
+        pathname === "/about" && "bg-[#000000]"
+      }`}
+    >
       <div className="flex justify-between items-center w-[1040px] h-[58px]">
         <Link
           href="/"

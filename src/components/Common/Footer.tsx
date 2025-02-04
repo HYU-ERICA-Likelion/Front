@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Footer() {
   const handleCopyClipBoard = () => {
-    navigator.clipboard.writeText("likelion@이메일.com");
+    navigator.clipboard.writeText("hyuerica@likelion.org");
     alert("메일 주소가 복사되었습니다!");
   };
 
@@ -44,31 +44,31 @@ export default function Footer() {
         <Link
           href="https://www.instagram.com/likelion_erica/"
           target="_blank"
-          className="relative w-[60px] h-[60px] rounded-[30px] bg-gray5"
+          className="w-[60px] h-[60px] rounded-[30px] bg-gray5 flex items-center justify-center"
         >
           <Image
             src="/assets/icons/instagram.svg"
             alt="logo"
             width={34}
             height={34}
-            className="absolute top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%]"
+            className=""
           />
         </Link>
         <Link
           href="https://github.com/HYU-ERICA-Likelion"
           target="_blank"
-          className="relative w-[60px] h-[60px] rounded-[30px] bg-gray5"
+          className="w-[60px] h-[60px] rounded-[30px] bg-gray5 flex items-center justify-center"
         >
           <Image
             src="/assets/icons/github.svg"
             alt="logo"
             width={34}
             height={34}
-            className="absolute top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%]"
+            className=""
           />
         </Link>
         <button
-          className="relative w-[60px] h-[60px] rounded-[30px] bg-gray5"
+          className="w-[60px] h-[60px] rounded-[30px] bg-gray5 flex items-center justify-center"
           onClick={handleCopyClipBoard}
         >
           <Image
@@ -76,7 +76,7 @@ export default function Footer() {
             alt="logo"
             width={28}
             height={22}
-            className="absolute top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%]"
+            className=""
           />
         </button>
       </div>
