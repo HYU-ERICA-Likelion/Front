@@ -146,7 +146,13 @@ export default function ArchivingModal({
                   <div className="font-semibold text-white/55 text-[14px] h-[20px]">
                     프로젝트 링크
                   </div>
-                  <div className="text-[16px] font-semibold h-[22px] ">
+                  <div
+                    className="text-[16px] font-semibold leading-[140%] overflow-x-scroll [&::-webkit-scrollbar]:hidden"
+                    style={{
+                      scrollbarWidth: "none",
+                      msOverflowStyle: "none",
+                    }}
+                  >
                     {project?.deploymentUrl ? project?.deploymentUrl : "-"}
                   </div>
                 </div>
@@ -160,7 +166,7 @@ export default function ArchivingModal({
                 {project?.type}
               </div>
             </div>
-            <div className="text-[18px] text-white/75">
+            <div className="text-[18px] text-white/75 leading-[140%]">
               {project?.description}
             </div>
           </div>
