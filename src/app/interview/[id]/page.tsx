@@ -17,7 +17,7 @@ async function getInterview(id: string) {
   try {
     const [gen, name] = id.split("-");
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_KEY}/interview?name=${name}&generation=${gen}`
+      `${process.env.API_URL_KEY}/interview?name=${name}&generation=${gen}`
     );
     if (!response.ok) throw new Error("Failed to fetch interview");
     return response.json();
