@@ -8,15 +8,15 @@ const roads = [
     title: "서류 합격자 발표",
   },
   {
-    schedule: "2.24~2.28",
+    schedule: "2.24~3.7",
     title: "면접 진행",
   },
   {
-    schedule: "3.2",
+    schedule: "3.9",
     title: "최종 합격자 발표",
   },
   {
-    schedule: "3.4",
+    schedule: "3.13",
     title: "OT",
   },
 ];
