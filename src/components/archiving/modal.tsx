@@ -14,9 +14,9 @@ export default function ArchivingModal({
   const project = selectedProject;
   const photoCount = project?.photos.length || 0;
   const roles: [string, string][] = [
-    ["Frontend", "프론트엔드"],
-    ["Backend", "백엔드"],
-    ["President", "기획/디자인"],
+    ["FrontendPartMember", "프론트엔드"],
+    ["BackendPartMember", "백엔드"],
+    ["PlanningPartMember", "기획/디자인"],
   ];
 
   useEffect(() => {
@@ -146,8 +146,24 @@ export default function ArchivingModal({
                   <div className="font-semibold text-white/55 text-[14px] h-[20px]">
                     프로젝트 링크
                   </div>
-                  <div className="text-[16px] font-semibold h-[22px] ">
-                    {project?.deploymentUrl ? project?.deploymentUrl : "-"}
+                  <div
+                    className="text-[16px] font-semibold h-[22px]"
+                    style={{
+                      scrollbarWidth: "none",
+                      msOverflowStyle: "none",
+                    }}
+                  >
+                    {project?.deploymentUrl ? (
+                      <a
+                        className="line-clamp-1 leading-[140%] overflow-x-scroll [&::-webkit-scrollbar]:hidden"
+                        href={project.deploymentUrl}
+                        target="_blank"
+                      >
+                        {project.deploymentUrl}
+                      </a>
+                    ) : (
+                      "-"
+                    )}
                   </div>
                 </div>
               </div>
@@ -160,7 +176,7 @@ export default function ArchivingModal({
                 {project?.type}
               </div>
             </div>
-            <div className="text-[18px] text-white/75">
+            <div className="text-[18px] text-white/75 leading-[140%]">
               {project?.description}
             </div>
           </div>
