@@ -3,15 +3,7 @@
 import ArchivingSelectGen from "@/components/archiving/gen";
 import ProjectCards from "@/components/archiving/card";
 import { Suspense, useEffect, useState } from "react";
-
-interface Project {
-  id: number;
-  name: string;
-  description: string;
-  type: string;
-  generation: number;
-  thumbnailUrl: string;
-}
+import { Project } from "@/types/project";
 
 async function getProjects() {
   try {

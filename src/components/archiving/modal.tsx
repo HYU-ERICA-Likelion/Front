@@ -1,26 +1,10 @@
 "use client";
 
-interface SubProject {
-  id: number;
-  name: string;
-  description: string;
-  type: string;
-  createdAt: string;
-  deploymentUrl: string;
-  generation: number;
-  photos: { id: number; photoUrl: string }[];
-  projectMembers: { name: string; role: string }[];
-}
-
-interface ArchivingModalProps {
-  sub: number;
-  onClose: () => void;
-}
-
 import Close from "@/../public/assets/icons/close.svg";
 import Arrow from "@/../public/assets/icons/arrow_forward.svg";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { ArchivingModalProps, SubProject } from "@/types/subproject";
 
 async function getProject(sub: number) {
   try {
