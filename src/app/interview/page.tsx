@@ -2,7 +2,7 @@
 import InterviewClient from "@/components/interview/InterviewClient";
 
 async function getMembers() {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_KEY}/members`);
+  const response = await fetch(`${process.env.API_URL_KEY}/members`);
   return response.json();
 }
 

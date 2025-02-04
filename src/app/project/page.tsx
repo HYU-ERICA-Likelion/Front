@@ -2,7 +2,7 @@ import MainComponent from "../../components/archiving/MainComponent";
 
 async function getProjects() {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_KEY}/projects`);
+    const response = await fetch(`${process.env.API_URL_KEY}/projects`);
     if (!response.ok) {
       throw new Error(`${response.status}`);
     }
