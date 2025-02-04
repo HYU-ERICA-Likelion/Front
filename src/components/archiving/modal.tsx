@@ -116,7 +116,7 @@ export default function ArchivingModal({ sub, onClose }: ArchivingModalProps) {
           <div className="flex flex-col w-[195px] flex-start justify-center gap-[20px]">
             <div className="inline-flex flex-col h-[256px] gap-[9px] p-[20px] bg-[#464242] rounded-[10px] ">
               <div className="align-center gap-[40px] text-[18px] font-semibold h-[25px]">
-                Team 3
+                {project?.team}
               </div>
               <div className="flex flex-col align-start w-[155px] gap-[22px]">
                 {roles.map(([english, korean]) => (
@@ -131,7 +131,6 @@ export default function ArchivingModal({ sub, onClose }: ArchivingModalProps) {
                           key={index}
                           className="text-[16px] font-semibold h-[22px]"
                         >
-                          {" "}
                           {member.name}{" "}
                         </div>
                       ))}

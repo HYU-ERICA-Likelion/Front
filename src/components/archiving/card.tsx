@@ -45,16 +45,16 @@ export default function ProjectCards({
                 width={288}
                 height={144}
                 className="rounded-lg bg-[#848383] object-cover h-[144px]"
-                src={project.thumbnailUrl}
-                alt={project.name}
+                src={project?.thumbnailUrl}
+                alt={project?.name}
               />
               <div>
                 <div className="flex flex-row items-center h-[24px] mt-[15px] gap-[12px]">
-                  <div className="text-[20px] font-bold">{project.name}</div>
-                  <span className="text-white/40">{project.type}</span>
+                  <div className="text-[20px] font-bold">{project?.name}</div>
+                  <span className="text-white/40">{project?.type}</span>
                 </div>
                 <div className="break-words text-white/75 line-clamp-2 mt-[7px] text-[14px] font-medium">
-                  {project.description}
+                  {project?.description}
                 </div>
               </div>
             </div>

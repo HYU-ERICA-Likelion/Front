@@ -1,5 +1,6 @@
 interface SubProject {
   id: number;
+  team: string;
   name: string;
   description: string;
   type: string;
