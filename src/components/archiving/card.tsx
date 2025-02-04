@@ -1,22 +1,14 @@
 "use client";
 
-interface Project {
-  id: number;
-  name: string;
-  description: string;
-  type: string;
-  generation: number;
-  thumbnailUrl: string;
-}
-
 interface ProjectCardsProps {
-  projectData: Project[];
+  projectData: SubProject[];
   selectedGen: string;
 }
 
 import Image from "next/image";
 import ArchivingModal from "./modal";
 import { useState } from "react";
+import { SubProject } from "@/types/subproject";
 
 export default function ProjectCards({
   projectData,
@@ -27,10 +19,12 @@ export default function ProjectCards({
       ? true
       : project.generation === Number(selectedGen.slice(0, -1))
   );
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [selectedProject, setSelectedProject] = useState<SubProject | null>(
+    null
+  );
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleProjectClick = (project: Project) => {
+  const handleProjectClick = (project: SubProject) => {
     setSelectedProject(project);
     setIsModalOpen(!isModalOpen);
   };
@@ -65,7 +59,7 @@ export default function ProjectCards({
       {isModalOpen && selectedProject && (
         <div className="fixed inset-0 bg-black bg-opacity-80">
           <ArchivingModal
-            sub={selectedProject.id}
+            selectedProject={selectedProject}
             onClose={() => setIsModalOpen(false)}
           />
         </div>

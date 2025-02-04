@@ -4,28 +4,14 @@ import Close from "@/../public/assets/icons/close.svg";
 import Arrow from "@/../public/assets/icons/arrow_forward.svg";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { ArchivingModalProps, SubProject } from "@/types/subproject";
+import { ArchivingModalProps } from "@/types/subproject";
 
-async function getProject(sub: number) {
-  try {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_KEY}/projects/${sub}`
-    );
-    if (!response.ok) {
-      throw new Error(`${response.status}`);
-    }
-    const json = await response.json();
-    console.log(json);
-    return json;
-  } catch (error) {
-    console.error(error);
-    return null;
-  }
-}
-
-export default function ArchivingModal({ sub, onClose }: ArchivingModalProps) {
+export default function ArchivingModal({
+  selectedProject,
+  onClose,
+}: ArchivingModalProps) {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
-  const [project, setProject] = useState<SubProject | null>(null);
+  const project = selectedProject;
   const photoCount = project?.photos.length || 0;
   const roles: [string, string][] = [
     ["Frontend", "프론트엔드"],
@@ -34,12 +20,8 @@ export default function ArchivingModal({ sub, onClose }: ArchivingModalProps) {
   ];
 
   useEffect(() => {
-    const fetchData = async () => {
-      const data = await getProject(sub);
-      setProject(data);
-    };
-    fetchData();
-  }, [sub]);
+    console.log(1);
+  }, []);
 
   const handlePrevSlide = () => {
     const newSlide = currentSlide === 0 ? photoCount - 1 : currentSlide - 1;
@@ -51,10 +33,21 @@ export default function ArchivingModal({ sub, onClose }: ArchivingModalProps) {
     setCurrentSlide(newSlide);
   };
 
+  const formatYear = (startDate: string, endDate: string) => {
+    if (startDate && endDate) {
+      return `${startDate?.slice(0, 4)}. ${startDate?.slice(
+        5,
+        7
+      )}~${endDate?.slice(0, 4)}. ${endDate?.slice(5, 7)}`;
+    } else {
+      return "-";
+    }
+  };
+
   return (
     <div
       onClick={onClose}
-      className="z-50 flex justify-center items-center w-full h-full overflow-y-auto"
+      className="flex justify-center items-center w-full h-full overflow-y-auto"
     >
       <div
         onClick={(e) => e.stopPropagation()}
@@ -77,7 +70,7 @@ export default function ArchivingModal({ sub, onClose }: ArchivingModalProps) {
         <div className="w-[701px] h-[394px] relative">
           {project && (
             <Image
-              src={project.photos[currentSlide].photoUrl}
+              src={project?.photos[currentSlide]?.photoUrl}
               alt={`프로젝트 이미지 ${currentSlide + 1}`}
               width={701}
               height={394}
@@ -146,7 +139,7 @@ export default function ArchivingModal({ sub, onClose }: ArchivingModalProps) {
                     프로젝트 기간
                   </div>
                   <div className="text-[16px] font-semibold h-[22px] ">
-                    {project?.createdAt}
+                    {formatYear(project?.startDate, project?.endDate)}
                   </div>
                 </div>
                 <div className="flex flex-col gap-[4px]">
@@ -154,7 +147,7 @@ export default function ArchivingModal({ sub, onClose }: ArchivingModalProps) {
                     프로젝트 링크
                   </div>
                   <div className="text-[16px] font-semibold h-[22px] ">
-                    {project?.deploymentUrl}
+                    {project?.deploymentUrl ? project?.deploymentUrl : "-"}
                   </div>
                 </div>
               </div>

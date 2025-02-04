@@ -46,7 +46,7 @@ export default async function Interview({
       />
       <div className="h-[93px]" />
       {interviewData.interviewDtoList.map(
-        (interview: Interview, index: any) => (
+        (interview: Interview, index: number) => (
           <div key={index} className="flex flex-col w-full">
             <QnA question={interview.question} answer={interview.answer} />
             <div className="h-[60px]" />

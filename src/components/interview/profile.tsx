@@ -1,5 +1,5 @@
 interface Props {
-  img: any;
+  img: string;
   role: string;
   name: string;
 }
