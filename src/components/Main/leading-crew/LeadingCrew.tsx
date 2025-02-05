@@ -4,6 +4,7 @@ import { useState } from "react";
 import TabSelector from "@/components/Common/TabSelector";
 import { crewMembers, generations } from "@/constants/leading-crew";
 import CrewMember from "./CrewMember";
+import SectionHeader from "../section-header/SectionHeader";
 
 export default function LeadingCrew() {
   const [selectedGeneration, setSelectedGeneration] = useState<"12기" | "13기">(
@@ -12,14 +13,10 @@ export default function LeadingCrew() {
 
   return (
     <section className="flex flex-col items-start gap-[100px] w-screen h-[899px] pt-[100px]">
-      <div className="flex flex-col items-center gap-[12px] w-full">
-        <strong className=" h-[29px] text-[24px] font-bold text-white tracking-[-0.005em] text-center">
-          한양대 에리카 멋사의
-        </strong>
-        <h3 className="h-[43px] text-[36px] font-bold text-white tracking-[-0.005em]">
-          파트별 운영진 소개
-        </h3>
-      </div>
+      <SectionHeader
+        subTitle="한양대 에리카 멋사의"
+        title="파트별 운영진 소개"
+      />
 
       <div className="flex gap-[87px] pl-[120px]">
         {/* 기수 선택 */}
