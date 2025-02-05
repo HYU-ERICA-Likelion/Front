@@ -1,6 +1,7 @@
 import { roadMap } from "@/constants";
 import RoadMapCard from "./RoadMapCard";
 import SectionHeader from "../section-header/SectionHeader";
+import Image from "next/image";
 
 export default function RoadMap() {
   return (
@@ -16,9 +17,11 @@ export default function RoadMap() {
               content={item.content}
             />
           ))}
-          <img
+          <Image
             src="/assets/images/character/roadmap-lion.svg"
             alt="road-map-lion"
+            width={185}
+            height={261}
             className="mobile:hidden tablet:block desktop:w-[185px] tablet:w-[123px] desktop:h-[261px] tablet:h-[173px] absolute desktop:top-[248px] tablet:top-[372px] desktop:left-[905px] tablet:left-[562px]"
           />
         </ul>

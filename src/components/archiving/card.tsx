@@ -39,7 +39,7 @@ export default function ProjectCards({
 
   return (
     <div className="flex flex-col items-center">
-      <div className="grid grid-cols-3 gap-[30px] pb-[309px]">
+      <div className="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 gap-[30px] pb-[309px] mt-[31px] tablet:mt-[45px]">
         {filteredProjects.map((project) => (
           <div key={project.id} onClick={() => handleProjectClick(project)}>
             <div className="cursor-pointer hover:bg-gray4/80 flex flex-col p-[15px_16.589px] w-[322px] h-[258px] rounded-[14px] bg-gray4">

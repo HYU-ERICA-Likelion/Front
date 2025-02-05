@@ -38,6 +38,7 @@ export default function LeadingCrew() {
         >
           {generations.map((generation, idx) => (
             <div
+              key={idx}
               className="tablet:w-[144px] tablet:h-[48px] 
                          mobile:min-w-[68px] mobile:h-[34px]"
             >

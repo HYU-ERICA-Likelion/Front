@@ -18,6 +18,7 @@ export default function Curriculum() {
       >
         {curriculumsPart.map((part, idx) => (
           <div
+            key={idx}
             className="tablet:w-[214px] tablet:h-[56px] 
                        mobile:min-w-[101px] mobile:h-[34px]"
           >
@@ -55,7 +56,7 @@ export default function Curriculum() {
         )}
       </ul>
 
-      <p className="text-[16px] font-bold tracking-[-0.005em] text-white/55">
+      <p className="text-[12px] tablet:text-[14px] desktop:text-[16px] font-bold tracking-[-0.005em] text-white/55">
         추후 일정조율의 이유로 커리큘럼은 변동될 수 있습니다
       </p>
     </section>
