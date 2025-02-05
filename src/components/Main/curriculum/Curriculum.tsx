@@ -10,7 +10,12 @@ export default function Curriculum() {
 
   return (
     <section className="flex flex-col items-center w-screen desktop:h-[815px] tablet:h-[950px] mobile:h-[776px] tablet:pt-[100px] mobile:pt-[45px]">
-      <div className="flex items-start justify-center gap-[60px] tablet:w-[713px] mobile:w-[292px] desktop:mb-[100px] tablet:mb-[57px] mobile:mb-[24px]">
+      <div
+        className="flex items-start justify-center 
+                      desktop:gap-[60px] desktop:mb-[100px]
+                      tablet:gap-[18px] tablet:w-[713px] tablet:mb-[57px]
+                      mobile:gap-[10px] mobile:w-[292px] mobile:mb-[24px]"
+      >
         {curriculumsPart.map((part, idx) => (
           <div
             className="tablet:w-[214px] tablet:h-[56px] 

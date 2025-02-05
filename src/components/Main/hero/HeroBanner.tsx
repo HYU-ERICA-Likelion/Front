@@ -30,7 +30,7 @@ export default function HeroBanner() {
           size={{ width: 368, height: 324 }}
         />
       </div>
-      <div className="absolute desktop:top-[455px] desktop:left-[55%] tablet:top-[380px] tablet:left-[48%] mobile:top-[500px] mobile:left-[38%]">
+      <div className="absolute desktop:top-[455px] desktop:left-[55%] tablet:top-[380px] tablet:left-[48%] mobile:top-[520px] mobile:left-[30%]">
         <RotatingImage
           src="/assets/images/hero/design.svg"
           size={{ width: 176, height: 179 }}
