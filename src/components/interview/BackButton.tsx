@@ -12,7 +12,12 @@ export default function BackButton() {
       className="w-full ml-[160px] mr-[auto] cursor-pointer hover:opacity-80 transition-opacity"
       aria-label="Go back"
     >
-      <Image src="/assets/icons/left-arrow.svg" alt="back" />
+      <Image
+        src="/assets/icons/left-arrow.svg"
+        width={40}
+        height={40}
+        alt="back"
+      />
     </button>
   );
 }

@@ -29,10 +29,12 @@ async function getInterview(id: string) {
 }
 
 export default async function Interview({
-  params: { id },
+  params,
 }: {
   params: { id: string };
 }) {
+  const awaitedParams = await params;
+  const { id } = awaitedParams;
   const interviewData: InterviewData | null = await getInterview(id);
 
   if (!interviewData) return <div>Interview not found</div>;

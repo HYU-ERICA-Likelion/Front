@@ -11,6 +11,8 @@ export default function Loading() {
       <Image
         src="/assets/images/loading.png"
         alt="loading"
+        width={347}
+        height={249}
         className="w-[347px] h-[249px] mb-[126px]"
       />
 
