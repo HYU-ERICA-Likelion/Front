@@ -5,8 +5,10 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import SlideCard from "./SlideCard";
 import { projectList } from "@/constants/carousel";
+import Image from "next/image";
+import { CustomArrowProps } from "react-slick";
 
-function NextArrow(props: any) {
+function NextArrow(props: CustomArrowProps) {
   const { style, onClick } = props;
 
   return (
@@ -20,13 +22,13 @@ function NextArrow(props: any) {
       onClick={onClick}
     >
       <div className="flex justify-center items-center w-full h-full">
-        <img src="/assets/icons/carousel-next-arrow.svg" alt="next-arrow" />
+        <Image src="/assets/icons/carousel-next-arrow.svg" alt="next-arrow" />
       </div>
     </div>
   );
 }
 
-function PrevArrow(props: any) {
+function PrevArrow(props: CustomArrowProps) {
   const { style, onClick } = props;
   return (
     <div
@@ -38,7 +40,7 @@ function PrevArrow(props: any) {
       onClick={onClick}
     >
       <div className="flex justify-center items-center w-full h-full">
-        <img src="/assets/icons/carousel-prev-arrow.svg" alt="next-arrow" />
+        <Image src="/assets/icons/carousel-prev-arrow.svg" alt="next-arrow" />
       </div>
     </div>
   );

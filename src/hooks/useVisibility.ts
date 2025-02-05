@@ -11,7 +11,7 @@ function useVisibility(selectedValue: string, delay: number = 400) {
     }, delay);
 
     return () => clearTimeout(timeoutId);
-  }, [selectedValue]);
+  }, [selectedValue, delay]);
 
   return { isVisible };
 }

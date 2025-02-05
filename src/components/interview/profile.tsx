@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface Props {
   img: string;
   role: string;
@@ -7,7 +9,7 @@ interface Props {
 export default function Profile({ img, role, name }: Props) {
   return (
     <div className="flex flex-col items-center">
-      <img src={img} className="w-[156px] h-[156px]" />
+      <Image src={img} alt="profile" className="w-[156px] h-[156px]" />
       <div className="h-[20px]" />
       <div className="text-[24px] font-semibold text-center">{role}</div>
       <div className="h-[12px]" />

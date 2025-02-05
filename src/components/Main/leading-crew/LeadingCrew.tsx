@@ -30,7 +30,7 @@ export default function LeadingCrew() {
               height={48}
               key={`curriculums-part-${idx}`}
               selectedValue={selectedGeneration}
-              onClick={(part: string) => setSelectedGeneration(generation)}
+              onClick={() => setSelectedGeneration(generation)}
             >
               {generation}
             </TabSelector>
