@@ -19,7 +19,7 @@ const curriculums = [
   {
     part: "기획/디자인",
     id: 4,
-    content: "피그마 실습(베리어블, 반응형 레이아웃)",
+    content: "피그마 실습 (베리어블, 반응형 레이아웃)",
   },
   {
     part: "기획/디자인",
@@ -79,7 +79,7 @@ const curriculums = [
   {
     part: "프론트엔드",
     id: 8,
-    content: "클론 코딩 → 간단한 웹 애플리케이션 제작",
+    content: "클론 코딩 (간단한 웹 애플리케이션 제작)",
   },
   {
     part: "백엔드",
@@ -109,7 +109,7 @@ const curriculums = [
   {
     part: "백엔드",
     id: 6,
-    content: "MVC 패턴 및 Spring 프레임워크 구조 설명",
+    content: "MVC 패턴 및 Spring 프레임워크 구조",
   },
   {
     part: "백엔드",

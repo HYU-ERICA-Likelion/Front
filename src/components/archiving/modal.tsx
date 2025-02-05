@@ -47,11 +47,11 @@ export default function ArchivingModal({
   return (
     <div
       onClick={onClose}
-      className="flex justify-center items-center w-full h-full overflow-y-auto"
+      className="flex items-start justify-center tablet:items-center w-screen h-screen overflow-y-auto py-[20px]"
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="flex flex-col p-[15px_18px] w-[738px] h-[914px] bg-background rounded-[14px] gap-[16px]"
+        className="flex flex-col p-[15px_18px] w-[290px] tablet:w-[738px] bg-background rounded-[14px] gap-[16px]"
       >
         <div className=" flex flex-row justify-between">
           <div className="text-[18px] font-semibold h-[21px] text-white/75 ">
@@ -67,14 +67,14 @@ export default function ArchivingModal({
           />
         </div>
 
-        <div className="w-[701px] h-[394px] relative">
+        <div className="w-[254px] h-[164px] desktop:w-[701px] desktop:h-[394px] relative">
           {project && (
             <Image
               src={project?.photos[currentSlide]?.photoUrl}
               alt={`프로젝트 이미지 ${currentSlide + 1}`}
               width={701}
               height={394}
-              className="h-[394px] shrink-0 rounded-[10px] object-cover bg-white"
+              className="h-[394px] w-[254px] tablet:w-[701px] shrink-0 rounded-[10px] object-cover bg-white"
             />
           )}
 
@@ -105,8 +105,8 @@ export default function ArchivingModal({
             </div>
           </button>
         </div>
-        <div className="flex flex-row gap-[26px]">
-          <div className="flex flex-col w-[195px] flex-start justify-center gap-[20px]">
+        <div className="flex flex-col mt-[230px] tablet:flex-row gap-[26px]">
+          <div className="flex flex-col w-11.5/12 tablet:w-[195px]  flex-start justify-center gap-[20px]">
             <div className="inline-flex flex-col h-[256px] gap-[9px] p-[20px] bg-[#464242] rounded-[10px] ">
               <div className="align-center gap-[40px] text-[18px] font-semibold h-[25px]">
                 {project?.team}
@@ -169,15 +169,17 @@ export default function ArchivingModal({
               </div>
             </div>
           </div>
-          <div className="flex flex-col w-[481px] gap-[7px]">
-            <div className="inline-flex items-center gap-[12px]">
-              <div className="text-[24px] font-semibold">{project?.name}</div>
-              <div className="text-[18px] font-semibold text-white/40">
+          <div className="flex flex-col  gap-[7px]">
+            <div className="inline-flex w-[254px] tablet:w-[481px] items-center gap-[12px]">
+              <div className="text-[20px] tablet:text-[24px] font-semibold">
+                {project?.name}
+              </div>
+              <div className="text-[12px] tablet:text-[18px] font-semibold text-white/40">
                 {project?.type}
               </div>
             </div>
-            <div className="text-[18px] text-white/75 leading-[140%]">
-              <div className="text-[18px] text-white/75 leading-[140%]">
+            <div className="w-[254px] tablet:w-[481px] text-[16px] tablet:text-[18px] text-white/75 leading-[140%]">
+              <div className=" text-white/75 leading-[140%]">
                 {project?.description
                   ?.replace(/\\n/g, "\n") // 이스케이프된 개행 문자 처리
                   .split(/\n{2,}/) // 연속된 개행 문자(2개 이상)를 기준으로 문단 나누기

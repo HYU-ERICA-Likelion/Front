@@ -1,21 +1,15 @@
 import { roadMap } from "@/constants";
 import RoadMapCard from "./RoadMapCard";
+import SectionHeader from "../section-header/SectionHeader";
 import Image from "next/image";
 
 export default function RoadMap() {
   return (
-    <section className="w-screen h-[865px] pt-[97px]">
-      <div className="flex flex-col items-center gap-[105px]">
-        <div className="flex flex-col items-center gap-[12px]">
-          <strong className="w-[203px] h-[29px] text-[24px] font-bold text-white tracking-[-0.005em] text-center">
-            새롭게 구성한
-          </strong>
-          <h3 className="w-[203px] h-[43px] text-[36px] font-bold text-white tracking-[-0.005em]">
-            13기의 로드맵
-          </h3>
-        </div>
+    <section className="w-screen tablet:h-[865px] mobile:h-[788px] tablet:pt-[97px] mobile:pt-[30px]">
+      <div className="flex flex-col items-center tablet:gap-[105px] mobile:gap-[36px]">
+        <SectionHeader subTitle="새롭게 구성한" title="13기의 로드맵" />
 
-        <ul className="relative flex flex-wrap justify-center items-center gap-x-6 gap-y-5  w-[1041px] h-[416px]">
+        <ul className="relative flex flex-wrap justify-center items-center gap-x-6 gap-y-5  desktop:w-[1041px] tablet:w-[686px] mobile:w-[331px] h-[416px]">
           {roadMap.map((item, index) => (
             <RoadMapCard
               key={`road-map-${index}`}
@@ -28,7 +22,7 @@ export default function RoadMap() {
             alt="road-map-lion"
             width={185}
             height={261}
-            className="absolute top-[248px] left-[905px]"
+            className="mobile:hidden tablet:block desktop:w-[185px] tablet:w-[123px] desktop:h-[261px] tablet:h-[173px] absolute desktop:top-[248px] tablet:top-[372px] desktop:left-[905px] tablet:left-[562px]"
           />
         </ul>
       </div>

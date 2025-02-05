@@ -47,7 +47,7 @@ export default async function Interview({ params }: PageProps) {
   if (!interviewData) return <div>Interview not found</div>;
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center w-full">
       <div className="h-[37px]" />
       <BackButton />
       <div className="h-[52px]" />

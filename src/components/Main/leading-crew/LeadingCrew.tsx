@@ -4,6 +4,7 @@ import { useState } from "react";
 import TabSelector from "@/components/Common/TabSelector";
 import { crewMembers, generations } from "@/constants/leading-crew";
 import CrewMember from "./CrewMember";
+import SectionHeader from "../section-header/SectionHeader";
 
 export default function LeadingCrew() {
   const [selectedGeneration, setSelectedGeneration] = useState<"12기" | "13기">(
@@ -11,35 +12,54 @@ export default function LeadingCrew() {
   );
 
   return (
-    <section className="flex flex-col items-start gap-[100px] w-screen h-[899px] pt-[100px]">
-      <div className="flex flex-col items-center gap-[12px] w-full">
-        <strong className=" h-[29px] text-[24px] font-bold text-white tracking-[-0.005em] text-center">
-          한양대 에리카 멋사의
-        </strong>
-        <h3 className="h-[43px] text-[36px] font-bold text-white tracking-[-0.005em]">
-          파트별 운영진 소개
-        </h3>
-      </div>
+    <section
+      className="flex flex-col w-screen pt-[100px]
+                        desktop:items-start desktop:gap-[100px]
+                        tablet:h-[899px] tablet:gap-[32px]
+                        mobile:items-center mobile:h-[1142px] mobile:gap-[30px]"
+    >
+      <SectionHeader
+        subTitle="한양대 에리카 멋사의"
+        title="파트별 운영진 소개"
+      />
 
-      <div className="flex gap-[87px] pl-[120px]">
+      <div
+        className="flex  
+                   desktop:flex-row desktop:pl-[12%] desktop:gap-[87px] 
+                   tablet:gap-[49px]
+                   mobile:flex-col mobile:gap-[25px]"
+      >
         {/* 기수 선택 */}
-        <div className="flex flex-col gap-[16px]">
+        <div
+          className="flex  
+                        desktop:flex-col desktop:justify-start
+                        tablet:gap-[16px]
+                        mobile:flex-row mobile:justify-center mobile:gap-[10px]"
+        >
           {generations.map((generation, idx) => (
-            <TabSelector
-              width={144}
-              height={48}
-              key={`curriculums-part-${idx}`}
-              selectedValue={selectedGeneration}
-              onClick={() => setSelectedGeneration(generation)}
+            <div
+              key={idx}
+              className="tablet:w-[144px] tablet:h-[48px] 
+                         mobile:min-w-[68px] mobile:h-[34px]"
             >
-              {generation}
-            </TabSelector>
+              <TabSelector
+                key={`curriculums-part-${idx}`}
+                selectedValue={selectedGeneration}
+                onClick={() => setSelectedGeneration(generation)}
+              >
+                {generation}
+              </TabSelector>
+            </div>
           ))}
         </div>
 
         {/* 운영진 소개 */}
-        <div className="flex flex-col gap-[20px]">
-          <ul className="w-[224px] h-[159px] grid grid-cols-2 gap-x-[24px]">
+        <div className="flex flex-col tablet:gap-[20px] mobile:gap-[22px]">
+          <ul
+            className="grid grid-cols-2
+                       tablet:items-start tablet:w-[224px] tablet:h-[159px] tablet:gap-x-[24px]
+                       mobile:w-[242px] mobile:min-h-[155px] mobile:gap-x-[42px]"
+          >
             {crewMembers[selectedGeneration].map(
               (member, idx) =>
                 member.generation === selectedGeneration &&
@@ -52,7 +72,12 @@ export default function LeadingCrew() {
                 )
             )}
           </ul>
-          <ul className="grid grid-cols-4 gap-x-[24px] gap-y-[20px]">
+          <ul
+            className="grid 
+                        tablet:grid-cols-4 tablet:gap-x-[24px] tablet:gap-y-[20px]
+                        mobile:grid-cols-2 mobile:gap-x-[42px] mobile:gap-y-[22px]
+                        "
+          >
             {crewMembers[selectedGeneration].map(
               (member, idx) =>
                 member.generation === selectedGeneration &&

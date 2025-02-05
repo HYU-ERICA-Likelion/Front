@@ -18,19 +18,27 @@ export default function CurriculumItem({
 
   return (
     <li
-      className={`flex items-center w-[481px] h-[85px] pl-[20px] bg-gray4 rounded-[12px] transition-all duration-500 ease-in-out
-        ${
-          isVisible
-            ? "opacity-100 translate-y-0 scale-100"
-            : "opacity-0 translate-y-2 scale-80"
-        }
-      `}
+      className={`flex items-center bg-gray4 rounded-[12px] transition-all duration-500 ease-in-out
+                   desktop:w-[481px] desktop:h-[85px] desktop:pl-[20px]
+                   tablet:w-[390px] tablet:h-[69px] 
+                   mobile:w-[311px] mobile:h-[63px] mobile:pl-[16px]
+                ${
+                  isVisible
+                    ? "opacity-100 translate-y-0 scale-100"
+                    : "opacity-0 translate-y-2 scale-80"
+                }
+                `}
     >
-      <div className="flex gap-[16px]">
-        <strong className="flex justify-center items-center w-[40px] h-[40px] rounded-[8px] text-[24px] font-bold text-white tracking-[-0.005em] bg-background">
+      <div className="flex items-center desktop:gap-[16px] mobile:gap-[13px]">
+        <strong
+          className="flex justify-center items-center font-bold text-white tracking-[-0.005em] bg-background
+                           desktop:w-[40px] desktop:h-[40px] desktop:rounded-[8px] desktop:text-[24px]
+                           tablet:w-[32px] tablet:h-[32px] tablet:rounded-[7px] tablet:text-[20px]
+                           mobile:w-[24px] mobile:h-[27px] mobile:rounded-[4px] mobile:text-[16px]"
+        >
           {isVisible ? num : ""}
         </strong>
-        <p className="text-[24px] font-semibold text-white tracking-[-0.005em]">
+        <p className="desktop:text-[24px] tablet:text-[20px] mobile:text-[16px]  font-semibold text-white tracking-[-0.005em]">
           {isVisible ? children : ""}
         </p>
       </div>

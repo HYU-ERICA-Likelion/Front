@@ -10,36 +10,22 @@ export default function Footer() {
   };
 
   return (
-    <footer className="flex justify-between items-center w-screen h-[257px] px-[120px] z-10 bg-black">
-      <div>
-        <div className="flex items-center gap-[10px] w-[600px] h-[58px]">
-          <Image
-            src="/assets/icons/horizontal-logo.svg"
-            alt="logo"
-            width={246}
-            height={20}
-          />
-          <Image
-            src="/assets/icons/close.svg"
-            alt="close icon"
-            width={24}
-            height={24}
-          />
-          <strong className="text-[26px] font-bold text-[white] tracking-[-0.5px]">
-            HANYANG UNIV.
-          </strong>
-        </div>
-
-        <div className="flex flex-col gap-[7px]">
-          <span className="text-[16px] font-normal tracking-[-0.5%] text-white/60">
-            한양대학교 ERICA, 멋쟁이사자처럼
-          </span>
-          <span className="text-[16px] font-normal tracking-[-0.5%] text-white/60">
-            Copyright2025.LIKELION. All rights reserved.
-          </span>
-        </div>
+    <footer className="flex flex-col tablet:flex-row desktop:flex-row items-center justify-center w-screen h-[354px] tablet:h-[257px] desktop:h-[257px]  z-10 bg-black gap-[38px] tablet:justify-between desktop:justify-between tablet:px-[60px]  desktop:px-[120px]">
+      <div className="flex flex-col">
+        <Image
+          src="/assets/images/footer-logo.png"
+          alt="likelion univ. x hanyang"
+          width={490}
+          height={58}
+          className="w-[300px] tablet:w-[400px] desktop:w-[490px]"
+        />
+        <span className="text-[14px] tablet:text-[16px] desktop:text-[16px] font-normal text-white/60">
+          한양대학교 ERICA, 멋쟁이사자처럼
+        </span>
+        <span className="text-[14px] tablet:text-[16px] desktop:text-[16px] font-normal text-white/60">
+          Copyright2025.LIKELION. All rights reserved.
+        </span>
       </div>
-
       <div className="flex gap-5 w-[220px]">
         <Link
           href="https://www.instagram.com/likelion_erica/"
