@@ -21,7 +21,7 @@ export default function TrackCard({ title, content, image }: TrackCardProps) {
             </p>
           ))}
         </div>
-        <Image src={image} alt={title} />
+        <Image src={image} width={203} height={201} alt={title} />
       </div>
     </li>
   );
