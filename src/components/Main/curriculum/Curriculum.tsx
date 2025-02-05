@@ -9,22 +9,33 @@ export default function Curriculum() {
   const [selectedPart, setSelectedPart] = useState<string>("기획/디자인");
 
   return (
-    <section className="flex flex-col items-center gap-[105px] w-screen h-[815px] pt-[100px] ">
-      <div className="flex gap-[60px] w-[713px] h-[56px]">
+    <section className="flex flex-col items-center w-screen desktop:h-[815px] tablet:h-[950px] mobile:h-[776px] tablet:pt-[100px] mobile:pt-[45px]">
+      <div className="flex items-start justify-center gap-[60px] tablet:w-[713px] mobile:w-[292px] desktop:mb-[100px] tablet:mb-[57px] mobile:mb-[24px]">
         {curriculumsPart.map((part, idx) => (
-          <TabSelector
-            width={172}
-            height={56}
-            key={`curriculums-part-${idx}`}
-            selectedValue={selectedPart}
-            onClick={(part: string) => setSelectedPart(part)}
+          <div
+            className="tablet:w-[214px] tablet:h-[56px] 
+                       mobile:min-w-[101px] mobile:h-[34px]"
           >
-            {part}
-          </TabSelector>
+            <TabSelector
+              key={`curriculums-part-${idx}`}
+              selectedValue={selectedPart}
+              onClick={(part: string) => setSelectedPart(part)}
+            >
+              {part}
+            </TabSelector>
+          </div>
         ))}
       </div>
 
-      <ul className="w-[1002px] h-[400px] grid grid-flow-col grid-cols-2 grid-rows-4 gap-x-[40px] gap-y-[20px]">
+      <ul
+        className="desktop:grid desktop:grid-flow-col desktop:grid-cols-2 desktop:grid-rows-4 desktop:gap-x-[40px] desktop:gap-y-[20px]
+                     mobile:flex mobile:flex-col tablet-gap-[16px] mobile:gap-[14px]
+                     desktop:w-[1002px] desktop:h-[400px] 
+                     tablet:w-[390px] tablet:h-[665px] 
+                     mobile:w-[315px] mobile:h-[600px] 
+                     mb-[24px]
+                     "
+      >
         {curriculums.map(
           (curriculum) =>
             curriculum.part === selectedPart && (
@@ -38,6 +49,10 @@ export default function Curriculum() {
             )
         )}
       </ul>
+
+      <p className="text-[16px] font-bold tracking-[-0.005em] text-white/55">
+        추후 일정조율의 이유로 커리큘럼은 변동될 수 있습니다
+      </p>
     </section>
   );
 }
