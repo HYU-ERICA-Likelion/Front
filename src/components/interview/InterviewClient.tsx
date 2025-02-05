@@ -31,7 +31,7 @@ export default function InterviewClient({ initialData }: InterviewClientProps) {
       <div className="flex flex-col xl:w-[1040px]">
         <InterviewSelectGen selectedGen={gen} setSelectedGen={setGen} />
         <div className="h-[66px]" />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+        <div className="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 gap-8 w-full">
           {filteredData.map((interview, index) => (
             <InterviewCard
               key={index}

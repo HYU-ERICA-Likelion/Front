@@ -9,7 +9,7 @@ export default function BackButton() {
   return (
     <button
       onClick={() => router.back()}
-      className="w-full ml-[160px] mr-[auto] cursor-pointer hover:opacity-80 transition-opacity"
+      className="w-full ml-[30px] tablet:ml-[8%] desktop:ml-[16%] mr-[auto] cursor-pointer hover:opacity-80 transition-opacity"
       aria-label="Go back"
     >
       <Image
