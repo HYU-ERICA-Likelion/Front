@@ -11,7 +11,7 @@ export default function CrewMember({ member, selectedValue }: CrewMemberProps) {
 
   return (
     <div
-      className={`flex flex-col gap-[12px] transition-all duration-1000 ease-in-out
+      className={`flex flex-col tablet:gap-[12px] mobile:gap-[8px] transition-all duration-1000 ease-in-out
     ${isVisible ? "opacity-100" : "opacity-0"}
     `}
     >
