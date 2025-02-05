@@ -15,7 +15,7 @@ export default function RoadMap() {
           </h3>
         </div>
 
-        <ul className="relative flex flex-wrap justify-center items-center gap-x-6 gap-y-5  w-[1041px] h-[416px]">
+        <ul className="relative flex flex-wrap justify-center items-center gap-x-6 gap-y-5  desktop:w-[1041px] tablet:w-[686px] mobile:w-[331px] h-[416px]">
           {roadMap.map((item, index) => (
             <RoadMapCard
               key={`road-map-${index}`}

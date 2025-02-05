@@ -8,6 +8,11 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        mobile: "22.5rem", // 360px
+        tablet: "48rem", // 768px
+        desktop: "68.75rem", // 1100px
+      },
       colors: {
         primary: "#F08314",
         gray4: "#474343",
