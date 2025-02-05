@@ -23,7 +23,7 @@ export default function RoadMap() {
               content={item.content}
             />
           ))}
-          <img
+          <Image
             src="/assets/images/character/roadmap-lion.svg"
             alt="road-map-lion"
             width={185}

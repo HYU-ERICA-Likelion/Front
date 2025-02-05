@@ -7,12 +7,10 @@ interface Interview {
   answer: string;
 }
 
-interface InterviewData {
-  photoUrl: string;
-  name: string;
-  role: string;
-  interviewDtoList: Interview[];
-}
+type Props = {
+  params: { id: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
 
 async function getInterview(id: string) {
   try {
@@ -28,12 +26,8 @@ async function getInterview(id: string) {
   }
 }
 
-export default async function Interview({
-  params: { id },
-}: {
-  params: { id: string };
-}) {
-  const interviewData: InterviewData | null = await getInterview(id);
+export default async function Interview({ params: { id } }: Props) {
+  const interviewData = await getInterview(id);
 
   if (!interviewData) return <div>Interview not found</div>;
 
