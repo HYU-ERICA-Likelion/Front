@@ -105,7 +105,7 @@ export default function ArchivingModal({
             </div>
           </button>
         </div>
-        <div className="flex flex-col mt-[230px] tablet:flex-row gap-[26px]">
+        <div className="flex flex-col mt-[230px] tablet:mt-[0px] tablet:flex-row gap-[26px]">
           <div className="flex flex-col w-11.5/12 tablet:w-[195px]  flex-start justify-center gap-[20px]">
             <div className="inline-flex flex-col h-[256px] gap-[9px] p-[20px] bg-[#464242] rounded-[10px] ">
               <div className="align-center gap-[40px] text-[18px] font-semibold h-[25px]">
