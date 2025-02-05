@@ -177,7 +177,16 @@ export default function ArchivingModal({
               </div>
             </div>
             <div className="text-[18px] text-white/75 leading-[140%]">
-              {project?.description}
+              <div className="text-[18px] text-white/75 leading-[140%]">
+                {project?.description
+                  ?.replace(/\\n/g, "\n") // 이스케이프된 개행 문자 처리
+                  .split(/\n{2,}/) // 연속된 개행 문자(2개 이상)를 기준으로 문단 나누기
+                  .map((paragraph, index) => (
+                    <p key={index} className="mb-4">
+                      {paragraph}
+                    </p>
+                  ))}
+              </div>
             </div>
           </div>
         </div>
