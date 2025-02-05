@@ -74,7 +74,7 @@ export default function ArchivingModal({
               alt={`프로젝트 이미지 ${currentSlide + 1}`}
               width={701}
               height={394}
-              className="h-[394px] w-[254px] tablet:w-[701px] shrink-0 rounded-[10px] object-cover bg-white"
+              className="h-[163px] w-[254px] tablet:w-[701px] tablet:h-[394px] shrink-0 rounded-[10px] object-cover bg-white"
             />
           )}
 
@@ -105,7 +105,7 @@ export default function ArchivingModal({
             </div>
           </button>
         </div>
-        <div className="flex flex-col mt-[230px] tablet:flex-row gap-[26px]">
+        <div className="flex flex-col tablet:flex-row gap-[26px]">
           <div className="flex flex-col w-11.5/12 tablet:w-[195px]  flex-start justify-center gap-[20px]">
             <div className="inline-flex flex-col h-[256px] gap-[9px] p-[20px] bg-[#464242] rounded-[10px] ">
               <div className="align-center gap-[40px] text-[18px] font-semibold h-[25px]">

@@ -6,7 +6,7 @@ export const metadata = {
 
 export default function Loading() {
   return (
-    <div className="flex flex-col items-center w-full">
+    <div className="flex flex-col items-center w-screen">
       <div className="h-[100px]" />
       <Image
         src="/assets/images/loading.png"
