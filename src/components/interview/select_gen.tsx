@@ -13,7 +13,7 @@ export default function InterviewSelectGen({
         <div
           key={gen}
           onClick={() => setSelectedGen(gen)}
-          className={`font-bold text-[12px] tablet:text-[20px] px-[22px] py-[10px] tablet:p-[12px_52px] border-none rounded-[505px] cursor-pointer ${
+          className={`font-bold text-[18px] tablet:text-[20px] px-[34px] py-[10px] tablet:p-[12px_52px] border-none rounded-[505px] cursor-pointer ${
             selectedGen === gen ? "bg-[#F08314]" : "bg-[#5A5858] text-[#CFCFCF]"
           }`}
         >
