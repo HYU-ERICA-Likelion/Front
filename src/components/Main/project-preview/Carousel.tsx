@@ -22,7 +22,12 @@ function NextArrow(props: CustomArrowProps) {
       onClick={onClick}
     >
       <div className="flex justify-center items-center w-full h-full">
-        <Image src="/assets/icons/carousel-next-arrow.svg" alt="next-arrow" />
+        <Image
+          src="/assets/icons/carousel-next-arrow.svg"
+          width={11.78}
+          height={20}
+          alt="next-arrow"
+        />
       </div>
     </div>
   );
@@ -40,7 +45,12 @@ function PrevArrow(props: CustomArrowProps) {
       onClick={onClick}
     >
       <div className="flex justify-center items-center w-full h-full">
-        <Image src="/assets/icons/carousel-prev-arrow.svg" alt="next-arrow" />
+        <Image
+          src="/assets/icons/carousel-prev-arrow.svg"
+          width={11.78}
+          height={20}
+          alt="next-arrow"
+        />
       </div>
     </div>
   );
