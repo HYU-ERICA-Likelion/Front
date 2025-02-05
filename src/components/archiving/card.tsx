@@ -60,7 +60,12 @@ export default function ProjectCards({
                   </span>
                 </div>
                 <div className="break-words text-white/75 line-clamp-2 mt-[7px] text-[14px] font-medium">
-                  {project?.description}
+                  {project?.description
+                    ?.replace(/\\n/g, "\n")
+                    .split("\n")
+                    .map((line, index) => (
+                      <p key={index}>{line}</p>
+                    ))}
                 </div>
               </div>
             </div>

@@ -68,13 +68,13 @@ const crewMember_13th = [
   {
     generation: "13기",
     role: "프론트엔드",
-    name: "송가온",
+    name: "송가은",
     imgUrl: "/assets/images/members/songgaeun.jpg",
   },
   {
     generation: "13기",
     role: "프론트엔드",
-    name: "이가온",
+    name: "이가은",
     imgUrl: "/assets/images/members/leegaeun.jpg",
   },
   {
