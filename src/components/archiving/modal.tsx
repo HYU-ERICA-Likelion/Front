@@ -67,7 +67,7 @@ export default function ArchivingModal({
           />
         </div>
 
-        <div className="w-[254px] h-[164px] desktop:w-[701px] desktop:h-[394px] relative">
+        <div className="w-[254px] h-[164px] tablet:w-[701px] tablet:h-[394px] relative">
           {project && (
             <Image
               src={project?.photos[currentSlide]?.photoUrl}

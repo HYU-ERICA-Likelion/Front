@@ -20,7 +20,7 @@ export default function ArchivingSelectGen({
             selectedGen === gen ? "bg-[#F08314]" : "bg-[#5A5858]"
           }`}
         >
-          <p className="w-[24px] tablet:w-[39px]">{gen}</p>
+          <p className="w-[24px] tablet:w-[40px]">{gen}</p>
         </div>
       ))}
     </div>
