@@ -7,17 +7,19 @@ export default function BackButton() {
   const router = useRouter();
 
   return (
-    <button
-      onClick={() => router.back()}
-      className="w-full ml-[30px] tablet:ml-[8%] desktop:ml-[16%] mr-[auto] cursor-pointer hover:opacity-80 transition-opacity"
-      aria-label="Go back"
-    >
-      <Image
-        src="/assets/icons/left-arrow.svg"
-        width={40}
-        height={40}
-        alt="back"
-      />
-    </button>
+    <div className="w-full pl-[30px] tablet:pl-[8%] desktop:pl-[16%] pr-[auto]">
+      <button
+        onClick={() => router.back()}
+        className="cursor-pointer hover:opacity-80 transition-opacity"
+        aria-label="Go back"
+      >
+        <Image
+          src="/assets/icons/left-arrow.svg"
+          width={40}
+          height={40}
+          alt="back"
+        />
+      </button>
+    </div>
   );
 }

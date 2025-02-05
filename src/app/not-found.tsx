@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <div className="w-full h-[934px] flex flex-col items-center pt-[87px]">
+    <div className="w-screen h-[934px] flex flex-col items-center pt-[87px]">
       <div className="relative w-[347px] h-[249px] mb-[33px]">
         <Image
           src="/assets/images/404.svg"

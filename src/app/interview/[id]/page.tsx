@@ -47,7 +47,7 @@ export default async function Interview({ params }: PageProps) {
   if (!interviewData) return <div>Interview not found</div>;
 
   return (
-    <div className="flex flex-col items-center w-full">
+    <div className="flex flex-col items-center w-screen">
       <div className="h-[37px]" />
       <BackButton />
       <div className="h-[52px]" />
@@ -59,7 +59,7 @@ export default async function Interview({ params }: PageProps) {
       <div className="h-[93px]" />
       {interviewData?.interviewDtoList.map(
         (interview: InterviewDto, index: number) => (
-          <div key={index} className="flex flex-col w-full">
+          <div key={index} className="flex flex-col w-screen">
             <QnA question={interview?.question} answer={interview?.answer} />
             <div className="h-[60px]" />
           </div>
