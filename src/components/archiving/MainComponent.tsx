@@ -13,9 +13,9 @@ interface Projects {
 export default function MainComponent({ projectData }: Projects) {
   const [gen, setGen] = useState<string>("전체");
   return (
-    <div className="min-h-screen flex flex-col items-center">
-      <div className="flex flex-col items-center gap-y-[12px] mt-[146px]">
-        <div className="flex justify-center items-center py-[12px] w-[160px] h-[45px] tablet:w-[203px] tablet:h-[53px] [px-[16px] bg-[#F08314] rounded-[4px] text-[18px] tablet:text-[24px] font-[700]">
+    <div className="min-h-screen w-screen flex flex-col items-center">
+      <div className="flex flex-col items-center gap-y-[12px] mt-[91px] tablet:mt-[146px]">
+        <div className="flex justify-center items-center py-[12px] w-[160px]  h-[45px] tablet:w-[203px] tablet:h-[53px] px-[15px] bg-[#F08314] rounded-[4px] text-[18px] tablet:text-[24px] font-[700]">
           프로젝트 아카이빙
         </div>
         <div className="text-[26px] tablet:text-[36px] font-[700]">

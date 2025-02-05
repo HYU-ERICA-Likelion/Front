@@ -25,7 +25,7 @@ export default function InterviewClient({ initialData }: InterviewClientProps) {
 
   return (
     <div className="flex flex-col items-center w-full">
-      <div className="h-[130px]" />
+      <div className="h-[91px] tablet:h-[130px]" />
       <InterviewTitle />
       <div className="h-[118px]" />
       <div className="flex flex-col xl:w-[1040px]">

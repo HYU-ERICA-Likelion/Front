@@ -47,7 +47,7 @@ export default function ArchivingModal({
   return (
     <div
       onClick={onClose}
-      className="flex justify-center items-center w-screen h-full overflow-y-auto"
+      className="flex items-start justify-center tablet:items-center w-screen h-screen overflow-y-auto py-[20px]"
     >
       <div
         onClick={(e) => e.stopPropagation()}

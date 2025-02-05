@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function RecruitTitle() {
   return (
-    <div className="flex flex-col items-center mt-[144px]">
+    <div className="flex flex-col items-center mt-[82px] tablet:mt-[144px]">
       <p className="text-center text-white text-[26px] tablet:text-[48px] font-bold">
         멋쟁이 사자처럼에서
         <br />

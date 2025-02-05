@@ -14,7 +14,7 @@ export default function Wanted() {
             관심이 많으신 분!
           </p>
         </div>
-        <div className="w-[318px] h-[113px] tablet:w-[546px] desktop:w-[334px] tablet:h-[157px] desktop:h-[216px] px-[58px] py-[75px] flex items-center justify-center bg-gray4 rounded-[20px]">
+        <div className="w-[318px] h-[113px] tablet:w-[546px] desktop:w-[334px] tablet:h-[157px] desktop:h-[216px] px-[52px] py-[75px] flex items-center justify-center bg-gray4 rounded-[20px]">
           <p className="w-[219px] tablet:w-[291px] desktop:[277px] text-center text-[18px] tablet:text-[24px] font-[500] text-whiteTransparent70">
             매주 진행되는 세션에{" "}
             <span className="text-white font-bold">빠짐없이 출석</span>할 수

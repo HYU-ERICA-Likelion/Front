@@ -20,7 +20,7 @@ export default function InterviewCard({
   generation,
 }: Props) {
   return (
-    <div className="flex flex-col bg-[#474343] active:bg-[#5E5A5A] w-[325px] max-h-[412px] p-[22px_15px_15px_15px] text-center rounded-[14px] items-center">
+    <div className="flex flex-col bg-[#474343] active:bg-[#5E5A5A] w-[306px] tablet:w-[325px] max-h-[412px] p-[22px_15px_15px_15px] text-center rounded-[14px] items-center">
       <div className="w-[176px] h-[176px] bg-[#FFFFFF90] overflow-hidden rounded-full flex items-center justify-center border-0">
         <Image
           src={photoUrl}
