@@ -1,4 +1,5 @@
 import { TrackCardProps } from "@/types/track";
+import Image from "next/image";
 
 export default function TrackCard({ title, content, image }: TrackCardProps) {
   const contentLines = content.split("\n") as string[];
@@ -20,7 +21,7 @@ export default function TrackCard({ title, content, image }: TrackCardProps) {
             </p>
           ))}
         </div>
-        <img src={image} alt={title} />
+        <Image src={image} alt={title} />
       </div>
     </li>
   );

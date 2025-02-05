@@ -4,6 +4,7 @@ import ArchivingSelectGen from "./gen";
 import ProjectCards from "./card";
 import { Project } from "@/../../src/types/project";
 import { Suspense, useState } from "react";
+import Image from "next/image";
 
 interface Projects {
   projectData: Project[];
@@ -23,7 +24,7 @@ export default function MainComponent({ projectData }: Projects) {
       <Suspense
         fallback={
           <div>
-            <img
+            <Image
               src="/assets/images/loading.png"
               alt="loading"
               className="w-[347px] h-[249px] mb-[126px]"

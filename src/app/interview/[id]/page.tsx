@@ -1,3 +1,4 @@
+import BackButton from "@/components/interview/BackButton";
 import Profile from "@/components/interview/profile";
 import QnA from "@/components/interview/QnA";
 
@@ -28,17 +29,21 @@ async function getInterview(id: string) {
 }
 
 export default async function Interview({
-  params: { id },
+  params,
 }: {
   params: { id: string };
 }) {
+  const awaitedParams = await params;
+  const { id } = awaitedParams;
   const interviewData: InterviewData | null = await getInterview(id);
 
   if (!interviewData) return <div>Interview not found</div>;
 
   return (
     <div className="flex flex-col items-center">
-      <div className="h-[129px]" />
+      <div className="h-[37px]" />
+      <BackButton />
+      <div className="h-[52px]" />
       <Profile
         img={interviewData.photoUrl}
         role={interviewData.role}

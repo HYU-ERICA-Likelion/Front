@@ -12,6 +12,7 @@ export default function RecruitTitle() {
       </p>
       <Link
         href="https://walla.my/survey/7WIhU1yFItHYrnx40hEv"
+        target="_blank"
         className="relative flex justify-center items-center mt-[89px] px-[26px] py-[12px] gap-[10px] box-border rounded-[20px] bg-primary h-[62px]"
       >
         <p className="text-white text-[32px] font-bold">지원하러 가기</p>
