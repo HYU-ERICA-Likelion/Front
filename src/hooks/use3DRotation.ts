@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState, useRef } from "react";
 
 export function use3DRotation() {
@@ -16,8 +18,8 @@ export function use3DRotation() {
       const centerX = rect.width / 2;
       const centerY = rect.height / 2;
 
-      const rotateY = ((x - centerX) / centerX) * 20;
-      const rotateX = ((centerY - y) / centerY) * 20;
+      const rotateY = ((x - centerX) / centerX) * 12;
+      const rotateX = ((centerY - y) / centerY) * 12;
 
       setRotation({ rotateX, rotateY });
     };

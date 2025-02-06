@@ -1,3 +1,5 @@
+"use client";
+
 import { use3DRotation } from "@/hooks/use3DRotation";
 
 interface RotatingImageProps {
@@ -22,7 +24,7 @@ export default function RotatingImage({ src, size }: RotatingImageProps) {
     >
       <img
         src={src}
-        className="desktop:scale-100 tablet:scale-[0.7] mobile:scale-[0.46]"
+        className="desktop:scale-[2.17] tablet:scale-[1.43] mobile:scale-[1]"
         alt="2D-image"
       />
     </div>

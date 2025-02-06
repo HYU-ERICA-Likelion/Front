@@ -18,34 +18,34 @@ export default function HeroBanner() {
         </h2>
       </div>
 
-      <div className="absolute desktop:top-[56px] desktop:left-[10%] tablet:top-[90px] tablet:left-[5%] mobile:top-[0] mobile:left-[2%]">
+      <div className="absolute desktop:top-[130px] desktop:left-[16%] tablet:top-[160px] tablet:left-[10%] mobile:top-[0] mobile:left-[10%]">
         <RotatingImage
           src="/assets/images/hero/sitting-lion.svg"
-          size={{ width: 254, height: 325 }}
+          size={{ width: 117, height: 150 }}
         />
       </div>
-      <div className="absolute desktop:top-[339px] desktop:left-[12%] tablet:top-[280px] tablet:left-[5%] mobile:top-[270px] mobile:left-[-5%]">
+      <div className="absolute desktop:top-[415px] desktop:left-[20%] tablet:top-[330px] tablet:left-[13%] mobile:top-[340px] mobile:left-[7%]">
         <RotatingImage
           src="/assets/images/hero/frontend.svg"
-          size={{ width: 368, height: 324 }}
+          size={{ width: 170, height: 149 }}
         />
       </div>
-      <div className="absolute desktop:top-[455px] desktop:left-[55%] tablet:top-[380px] tablet:left-[48%] mobile:top-[520px] mobile:left-[30%]">
+      <div className="absolute desktop:top-[490px] desktop:left-[57%] tablet:top-[400px] tablet:left-[54%] mobile:top-[530px] mobile:left-[45%]">
         <RotatingImage
           src="/assets/images/hero/design.svg"
-          size={{ width: 176, height: 179 }}
+          size={{ width: 81, height: 82 }}
         />
       </div>
-      <div className="absolute desktop:top-[53px] desktop:left-[64%] tablet:top-[70px] tablet:left-[53%] mobile:top-[30px] mobile:left-[38%]">
+      <div className="absolute desktop:top-[150px] desktop:left-[70%] tablet:top-[160px] tablet:left-[65%] mobile:top-[125px] mobile:left-[50%]">
         <RotatingImage
           src="/assets/images/hero/backend.svg"
-          size={{ width: 343, height: 357 }}
+          size={{ width: 158, height: 165 }}
         />
       </div>
-      <div className="absolute desktop:top-[232px] desktop:left-[75%] tablet:top-[200px] tablet:left-[65%] mobile:top-[340px] mobile:left-[55%]">
+      <div className="absolute desktop:top-[320px] desktop:left-[78%] tablet:top-[280px] tablet:left-[75%] mobile:top-[400px] mobile:left-[65%]">
         <RotatingImage
           src="/assets/images/hero/pointer.svg"
-          size={{ width: 252, height: 338 }}
+          size={{ width: 110, height: 135 }}
         />
       </div>
     </section>
