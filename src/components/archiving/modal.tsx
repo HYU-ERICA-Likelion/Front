@@ -12,12 +12,9 @@ export default function ArchivingModal({
 }: ArchivingModalProps) {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
   const project = selectedProject;
+  console.log(project);
   const photoCount = project?.photos.length || 0;
-  const roles: [string, string][] = [
-    ["FrontendPartMember", "프론트엔드"],
-    ["BackendPartMember", "백엔드"],
-    ["PlanningPartMember", "기획/디자인"],
-  ];
+  const roles = ["기획/디자인", "프론트엔드", "백엔드"];
 
   useEffect(() => {
     console.log(1);
@@ -31,17 +28,6 @@ export default function ArchivingModal({
   const handleNextSlide = () => {
     const newSlide = currentSlide === photoCount - 1 ? 0 : currentSlide + 1;
     setCurrentSlide(newSlide);
-  };
-
-  const formatYear = (startDate: string, endDate: string) => {
-    if (startDate && endDate) {
-      return `${startDate?.slice(0, 4)}. ${startDate?.slice(
-        5,
-        7
-      )}~${endDate?.slice(0, 4)}. ${endDate?.slice(5, 7)}`;
-    } else {
-      return "-";
-    }
   };
 
   return (
@@ -107,12 +93,32 @@ export default function ArchivingModal({
         </div>
         <div className="flex flex-col tablet:flex-row gap-[26px]">
           <div className="flex flex-col w-11.5/12 tablet:w-[195px]  flex-start justify-center gap-[20px]">
-            <div className="inline-flex flex-col h-[256px] gap-[9px] p-[20px] bg-[#464242] rounded-[10px] ">
+            <div className="inline-flex flex-col h-auto gap-[9px] p-[20px] bg-[#464242] rounded-[10px] ">
               <div className="align-center gap-[40px] text-[18px] font-semibold h-[25px]">
                 {project?.team}
               </div>
               <div className="flex flex-col align-start w-[155px] gap-[22px]">
-                {roles.map(([english, korean]) => (
+                {roles.map((role) => (
+                  <div key={role} className="flex flex-col gap-[4px]">
+                    <div className="font-semibold text-white/55 text-[14px] h-[20px]">
+                      {role}
+                    </div>
+                    <div className="flex gap-[8px] flex-wrap">
+                      {project?.projectMembers
+                        .filter((member) => member.role === role)
+                        .map((member, index, array) => (
+                          <div
+                            key={index}
+                            className="text-[16px] font-semibold h-[22px]"
+                          >
+                            {member.name}
+                            {index < array.length - 1 && ", "}
+                          </div>
+                        ))}
+                    </div>
+                  </div>
+                ))}
+                {/* {roles.map(([english, korean]) => (
                   <div key={english} className="flex flex-col gap-[4px]">
                     <div className="font-semibold text-white/55 text-[14px] h-[20px]">
                       {korean}
@@ -128,7 +134,7 @@ export default function ArchivingModal({
                         </div>
                       ))}
                   </div>
-                ))}
+                ))} */}
               </div>
             </div>
 
@@ -139,7 +145,7 @@ export default function ArchivingModal({
                     프로젝트 기간
                   </div>
                   <div className="text-[16px] font-semibold h-[22px] ">
-                    {formatYear(project?.startDate, project?.endDate)}
+                    {`${project?.startDate}~${project?.endDate}`}
                   </div>
                 </div>
                 <div className="flex flex-col gap-[4px]">
@@ -181,8 +187,8 @@ export default function ArchivingModal({
             <div className="w-[254px] tablet:w-[481px] text-[16px] tablet:text-[18px] text-white/75 leading-[140%]">
               <div className=" text-white/75 leading-[140%]">
                 {project?.description
-                  ?.replace(/\\n/g, "\n") // 이스케이프된 개행 문자 처리
-                  .split(/\n{2,}/) // 연속된 개행 문자(2개 이상)를 기준으로 문단 나누기
+                  ?.replace(/\\n/g, "\n")
+                  .split(/\n{2,}/)
                   .map((paragraph, index) => (
                     <p key={index} className="mb-4">
                       {paragraph}

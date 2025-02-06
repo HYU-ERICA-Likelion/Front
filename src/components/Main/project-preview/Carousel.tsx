@@ -70,10 +70,20 @@ export default function Carousel() {
     nextArrow: <NextArrow />,
     variableWidth: false,
     adaptiveHeight: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          centerPadding: "0",
+          centerMode: false,
+        },
+      },
+    ],
   };
 
   return (
-    <div className="relative flex flex-col justify-center items-center w-full h-[464px] mb-[44px]">
+    <div className="relative flex flex-col justify-center items-center w-full h-[464px] mb-[-50px] tablet:mb-[44px]">
       <Slider {...settings} className="w-full mx-auto">
         {projectList.map((project, index) => (
           <div key={index}>

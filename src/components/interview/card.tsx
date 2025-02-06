@@ -5,19 +5,20 @@ const img1 = "/assets/icons/quotes.svg";
 const img2 = "/assets/icons/right-arrow.svg";
 
 interface Props {
+  id: number;
   photoUrl: string;
   name: string;
-  generation: number;
+  generations: number[];
   role: string;
   description: string;
 }
 
 export default function InterviewCard({
+  id,
   photoUrl,
   name,
   role,
   description,
-  generation,
 }: Props) {
   return (
     <div className="flex flex-col bg-[#474343] active:bg-[#5E5A5A] w-[306px] tablet:w-[325px] max-h-[412px] p-[22px_15px_15px_15px] text-center rounded-[14px] items-center">
@@ -38,7 +39,7 @@ export default function InterviewCard({
       <div className="h-[30px]" />
       <Link
         prefetch
-        href={`/interview/${generation}-${name}`}
+        href={`/interview/${id}`}
         className="flex flex-row items-center gap-x-[12px] p-[18.5px_13.5px] bg-[#292725] rounded-[12px]"
       >
         <Image src={img1} width={27.39} height={27.39} alt="quotes" />
