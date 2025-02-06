@@ -1,11 +1,21 @@
+"use client";
+
 import { roadMap } from "@/constants";
 import RoadMapCard from "./RoadMapCard";
 import SectionHeader from "../section-header/SectionHeader";
 import Image from "next/image";
+import useFadeInOnScroll from "@/hooks/useFadeInOnScroll";
 
 export default function RoadMap() {
+  const { isVisible, elementRef } = useFadeInOnScroll(400);
+
   return (
-    <section className="w-screen tablet:h-[865px] mobile:h-[788px] tablet:pt-[97px] mobile:pt-[30px]">
+    <section
+      ref={elementRef}
+      className={`w-screen tablet:h-[865px] mobile:h-[788px] tablet:pt-[97px] mobile:pt-[30px] transition-opacity duration-1000 ease-in-out ${
+        isVisible ? "opacity-100" : "opacity-0"
+      }`}
+    >
       <div className="flex flex-col items-center tablet:gap-[105px] mobile:gap-[36px]">
         <SectionHeader subTitle="새롭게 구성한" title="13기의 로드맵" />
 

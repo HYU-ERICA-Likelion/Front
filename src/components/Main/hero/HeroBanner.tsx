@@ -1,10 +1,18 @@
 "use client";
 
+import useFadeInOnScroll from "@/hooks/useFadeInOnScroll";
 import RotatingImage from "./RotatingImage";
 
 export default function HeroBanner() {
+  const { isVisible, elementRef } = useFadeInOnScroll(400);
+
   return (
-    <section className="relative flex flex-col items-center w-screen tablet:h-[731px] mobile:h-[718px] tablet:pt-[151px] mobile:pt-[240px]">
+    <section
+      ref={elementRef}
+      className={`relative flex flex-col items-center w-screen tablet:h-[731px] mobile:h-[718px] tablet:pt-[151px] mobile:pt-[240px] transition-opacity duration-1000 ease-in-out ${
+        isVisible ? "opacity-100" : "opacity-0"
+      }`}
+    >
       <div className="flex flex-col items-center tablet:gap-[28px] mobile:gap-[14px] z-10">
         <h3
           className="flex justify-center items-center rounded-[4px] bg-primary font-bold text-white tracking-[-0.5%]
@@ -17,7 +25,6 @@ export default function HeroBanner() {
           멋쟁이 사자처럼에서 <br /> 13기 아기사자를 모집합니다!
         </h2>
       </div>
-
       <div className="absolute desktop:top-[130px] desktop:left-[16%] tablet:top-[160px] tablet:left-[10%] mobile:top-[0] mobile:left-[10%]">
         <RotatingImage
           src="/assets/images/hero/sitting-lion.svg"
