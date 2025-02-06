@@ -4,12 +4,20 @@ import { useState } from "react";
 import { curriculums, curriculumsPart } from "@/constants/curriculum";
 import TabSelector from "../../Common/TabSelector";
 import CurriculumItem from "./CurriculumItem";
+import useFadeInOnScroll from "@/hooks/useFadeInOnScroll";
 
 export default function Curriculum() {
+  const { isVisible, elementRef } = useFadeInOnScroll(400);
   const [selectedPart, setSelectedPart] = useState<string>("기획/디자인");
 
   return (
-    <section className="flex flex-col items-center w-screen desktop:h-[815px] tablet:h-[950px] mobile:h-[776px] tablet:pt-[100px] mobile:pt-[45px]">
+    <section
+      ref={elementRef}
+      className={`flex flex-col items-center w-screen desktop:h-[815px] tablet:h-[950px] mobile:h-[776px] tablet:pt-[100px] mobile:pt-[45px] transition-opacity duration-1000 ease-in-out ${
+        isVisible ? "opacity-100" : "opacity-0"
+      }`}
+    >
+      {" "}
       <div
         className="flex items-start justify-center 
                       desktop:gap-[60px] desktop:mb-[100px]
@@ -32,7 +40,6 @@ export default function Curriculum() {
           </div>
         ))}
       </div>
-
       <ul
         className="desktop:grid desktop:grid-flow-col desktop:grid-cols-2 desktop:grid-rows-4 desktop:gap-x-[40px] desktop:gap-y-[20px]
                      mobile:flex mobile:flex-col tablet-gap-[16px] mobile:gap-[14px]
@@ -55,7 +62,6 @@ export default function Curriculum() {
             )
         )}
       </ul>
-
       <p className="text-[12px] tablet:text-[14px] desktop:text-[16px] font-bold tracking-[-0.005em] text-white/55">
         추후 일정조율의 이유로 커리큘럼은 변동될 수 있습니다
       </p>
