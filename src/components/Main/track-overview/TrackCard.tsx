@@ -6,9 +6,10 @@ export default function TrackCard({ title, content, image }: TrackCardProps) {
   return (
     <>
       <li
-        className="flex items-center w-full desktop:flex-col desktop:gap-[24] desktop:w-[314px] desktop:h-[421px]  
-                      tablet:flex-row tablet:justify-center tablet:gap-[84px] tablet:min-h-[168px]  tablet:rounded-[20px] 
-                      mobile:flex-col mobile:justify-center mobile:gap-[11px] mobile:min-h-[369px]   mobile:rounded-[10px] bg-gray4 shadow-[0_2px_28px_10px_rgba(0,0,0,0.05)]"
+        className="flex items-center w-full 
+                   desktop:flex-col desktop:gap-[24px] desktop:w-[314px] desktop:h-[421px]  
+                   tablet:flex-row tablet:justify-center tablet:gap-[84px] tablet:min-h-[168px] tablet:rounded-[20px] 
+                   mobile:flex-col mobile:justify-center mobile:gap-[11px] mobile:min-h-[369px] mobile:rounded-[10px] bg-gray4 shadow-[0_2px_28px_10px_rgba(0,0,0,0.05)]"
       >
         <div className="flex flex-col desktop:items-start tablet:gap-[24px] mobile:gap-[11px]">
           <strong className="tablet:text-[28px] mobile:text-[22px] font-bold text-white tracking-[-0.005em]">
