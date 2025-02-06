@@ -5,18 +5,23 @@ import TabSelector from "@/components/Common/TabSelector";
 import { crewMembers, generations } from "@/constants/leading-crew";
 import CrewMember from "./CrewMember";
 import SectionHeader from "../section-header/SectionHeader";
+import useFadeInOnScroll from "@/hooks/useFadeInOnScroll";
 
 export default function LeadingCrew() {
+  const { isVisible, elementRef } = useFadeInOnScroll(400);
   const [selectedGeneration, setSelectedGeneration] = useState<"12기" | "13기">(
     "13기"
   );
 
   return (
     <section
-      className="flex flex-col w-screen pt-[100px]
+      ref={elementRef}
+      className={`flex flex-col w-screen pt-[100px]
                         desktop:items-start desktop:gap-[100px]
                         tablet:h-[899px] tablet:gap-[32px]
-                        mobile:items-center mobile:h-[1142px] mobile:gap-[30px]"
+                        mobile:items-center mobile:h-[1142px] mobile:gap-[30px] transition-opacity duration-1000 ease-in-out ${
+                          isVisible ? "opacity-100" : "opacity-0"
+                        }`}
     >
       <SectionHeader
         subTitle="한양대 에리카 멋사의"

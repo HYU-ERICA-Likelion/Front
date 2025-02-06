@@ -1,15 +1,23 @@
+"use client";
+
 import Link from "next/link";
 import Carousel from "./Carousel";
 import SectionHeader from "../section-header/SectionHeader";
+import useFadeInOnScroll from "@/hooks/useFadeInOnScroll";
 
 export default function ProjectPreview() {
+  const { isVisible, elementRef } = useFadeInOnScroll(400);
+
   return (
     <section
-      className="flex flex-col items-center w-screen overflow-hidden
+      ref={elementRef}
+      className={`flex flex-col items-center w-screen overflow-hidden
                         desktop:h-[1101px] desktop:pt-[100px]
                         tablet:h-[966px] 
                         mobile:h-[831px] mobile:pt-[124px]
-                        "
+                        transition-opacity duration-1000 ease-in-out ${
+                          isVisible ? "opacity-100" : "opacity-0"
+                        }`}
     >
       <SectionHeader
         subTitle="지난 기수 아기사자들의"
