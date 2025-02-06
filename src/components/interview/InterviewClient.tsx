@@ -5,10 +5,11 @@ import InterviewSelectGen from "@/components/interview/select_gen";
 import InterviewCard from "@/components/interview/card";
 
 type InterviewData = {
+  id: number;
   name: string;
-  generation: number;
-  role: string;
   photoUrl: string;
+  role: string;
+  generations: number[];
   description: string;
 };
 
@@ -19,8 +20,8 @@ interface InterviewClientProps {
 export default function InterviewClient({ initialData }: InterviewClientProps) {
   const [gen, setGen] = useState<string>("13기");
 
-  const filteredData = initialData.filter(
-    (interview) => interview.generation === parseInt(gen.replace("기", ""))
+  const filteredData = initialData.filter((interview) =>
+    interview.generations?.includes(parseInt(gen.replace("기", "")))
   );
 
   return (
@@ -35,9 +36,10 @@ export default function InterviewClient({ initialData }: InterviewClientProps) {
           {filteredData.map((interview, index) => (
             <InterviewCard
               key={index}
+              id={interview.id}
               photoUrl={interview.photoUrl}
               name={interview.name}
-              generation={interview.generation}
+              generations={interview.generations}
               role={interview.role}
               description={interview.description}
             />

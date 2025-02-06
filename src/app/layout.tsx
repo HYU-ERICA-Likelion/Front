@@ -14,6 +14,9 @@ const pretendard = localFont({
 export const metadata: Metadata = {
   title: "멋쟁이사자처럼 :: 한양대 에리카",
   description: "멋쟁이사자처럼 한양대 에리카 공식 홈페이지",
+  icons: {
+    icon: "/Favicon.svg",
+  },
   openGraph: {
     title: "멋쟁이사자처럼 :: 한양대 에리카",
     description: "🦁멋사 ERICA 13기 모집 중🔥",
