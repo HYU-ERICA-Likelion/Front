@@ -17,9 +17,9 @@ interface Interview {
 }
 
 interface PageProps {
-  params: {
+  params: Promise<{
     id: number;
-  };
+  }>;
 }
 
 // async function getInterview(id: number): Promise<Interview | null> {
@@ -40,8 +40,8 @@ export async function generateStaticParams() {
   return [];
 }
 
-export default function Interview({ params }: PageProps) {
-  const id = params.id;
+export default async function Interview({ params }: PageProps) {
+  const id = (await params).id;
   // const interviewData = await getInterview(id);
   const interviewData = memberInterviews[id - 1];
 
