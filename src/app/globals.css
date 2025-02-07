@@ -79,8 +79,10 @@ ol {
 
 .slick-slide:not(.slick-center) {
   transform: scale(0.65) !important;
-  filter: blur(7px);
-  opacity: 0.54;
+  @media (min-width: 768px) {
+    filter: blur(7px);
+    opacity: 0.54;
+  }
 }
 
 .slick-center {
