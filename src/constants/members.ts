@@ -80,7 +80,7 @@ export const members = [
       "https://storage.googleapis.com/liklelionericahomepage/members/13%E1%84%92%E1%85%A7%E1%86%AB%E1%84%89%E1%85%A5.png",
     role: "기획/디자인",
     generations: [13],
-    description: "Make likelion great again",
+    description: "멋사의 손발이 되어 여러분들께 성장의 발판을 마련해드리겠습니다!",
   },
   {
     id: 10,
