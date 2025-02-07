@@ -19,7 +19,7 @@ export default function CurriculumItem({
   return (
     <li
       className={`flex items-center bg-gray4 rounded-[12px] transition-all duration-500 ease-in-out
-                   desktop:w-[481px] desktop:h-[85px] desktop:pl-[20px]
+                   desktop:w-[481px] desktop:h-[85px] desktop:pl-[20px] desktop:pr-[5px]
                    tablet:w-[390px] tablet:h-[69px] 
                    mobile:w-[311px] mobile:h-[63px] mobile:pl-[16px]
                 ${
