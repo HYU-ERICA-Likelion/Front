@@ -17,7 +17,6 @@ export default function Curriculum() {
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      {" "}
       <div
         className="flex items-start justify-center 
                       desktop:gap-[60px] desktop:mb-[100px]

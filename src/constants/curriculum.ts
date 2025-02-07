@@ -89,7 +89,7 @@ const curriculums = [
   {
     part: "백엔드",
     id: 2,
-    content: "Python 및 Django 프레임워크 설명",
+    content: "가상환경 세팅 + Djnago 모델 생성과 ORM / DB",
   },
   {
     part: "백엔드",
