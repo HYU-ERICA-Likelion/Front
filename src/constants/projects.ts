@@ -9,14 +9,12 @@ export const projects = [
     startDate: "2024. 7",
     endDate: "2024. 8",
     deploymentUrl: "-",
-    thumbnailUrl:
-      "https://storage.googleapis.com/liklelionericahomepage/projects/%E1%84%86%E1%85%AE%E1%84%83%E1%85%A2%E1%84%8E%E1%85%A1%E1%86%BC%E1%84%80%E1%85%A9%20resizing_1.png",
+    thumbnailUrl: "/assets/images/project/무대창고.jpg",
     generation: 12,
     photos: [
       {
         id: 1,
-        photoUrl:
-          "https://storage.googleapis.com/liklelionericahomepage/projects/%E1%84%86%E1%85%AE%E1%84%83%E1%85%A2%E1%84%8E%E1%85%A1%E1%86%BC%E1%84%80%E1%85%A9%20resizing_1.png",
+        photoUrl: "/assets/images/project/무대창고.jpg",
       },
     ],
     projectMembers: [
@@ -38,14 +36,12 @@ export const projects = [
     startDate: "2024. 7",
     endDate: "2024. 8",
     deploymentUrl: "-",
-    thumbnailUrl:
-      "https://storage.googleapis.com/liklelionericahomepage/projects/400mg%20resizing_2.png",
+    thumbnailUrl: "/assets/images/project/400mg.jpg",
     generation: 12,
     photos: [
       {
         id: 1,
-        photoUrl:
-          "https://storage.googleapis.com/liklelionericahomepage/projects/400mg%20resizing_2.png",
+        photoUrl: "/assets/images/project/400mg.jpg",
       },
     ],
     projectMembers: [
@@ -66,14 +62,12 @@ export const projects = [
     startDate: "2024. 7",
     endDate: "2024. 8",
     deploymentUrl: "-",
-    thumbnailUrl:
-      "https://storage.googleapis.com/liklelionericahomepage/projects/PHOREST%20resizing_1.png",
+    thumbnailUrl: "/assets/images/project/포레스트.jpg",
     generation: 12,
     photos: [
       {
         id: 1,
-        photoUrl:
-          "https://storage.googleapis.com/liklelionericahomepage/projects/PHOREST%20resizing_1.png",
+        photoUrl: "/assets/images/project/포레스트.jpg",
       },
     ],
     projectMembers: [
@@ -95,14 +89,12 @@ export const projects = [
     startDate: "2024. 8",
     endDate: "2024. 9",
     deploymentUrl: "https://falling-erica.web.app/",
-    thumbnailUrl:
-      "https://storage.googleapis.com/liklelionericahomepage/projects/%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B3%E1%86%AF%E1%84%8E%E1%85%AE%E1%86%A8%E1%84%8C%E1%85%A6.jpg",
+    thumbnailUrl: "/assets/images/project/가을축제.jpg",
     generation: 12,
     photos: [
       {
         id: 1,
-        photoUrl:
-          "https://storage.googleapis.com/liklelionericahomepage/projects/%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B3%E1%86%AF%E1%84%8E%E1%85%AE%E1%86%A8%E1%84%8C%E1%85%A6.jpg",
+        photoUrl: "/assets/images/project/가을축제.jpg",
       },
     ],
     projectMembers: [
@@ -127,14 +119,12 @@ export const projects = [
     startDate: "2024. 9",
     endDate: "2024. 12",
     deploymentUrl: "-",
-    thumbnailUrl:
-      "https://storage.googleapis.com/liklelionericahomepage/projects/%E1%84%86%E1%85%A5%E1%84%86%E1%85%A5%E1%86%A8%E1%84%82%E1%85%A3%E1%86%BC%20resizing_3.png",
+    thumbnailUrl: "/assets/images/project/머먹냥.jpg",
     generation: 12,
     photos: [
       {
         id: 1,
-        photoUrl:
-          "https://storage.googleapis.com/liklelionericahomepage/projects/%E1%84%86%E1%85%A5%E1%84%86%E1%85%A5%E1%86%A8%E1%84%82%E1%85%A3%E1%86%BC%20resizing_3.png",
+        photoUrl: "/assets/images/project/머먹냥.jpg",
       },
     ],
     projectMembers: [
@@ -155,24 +145,20 @@ export const projects = [
     startDate: "2024. 9",
     endDate: "2024. 12",
     deploymentUrl: "-",
-    thumbnailUrl:
-      "https://storage.googleapis.com/liklelionericahomepage/projects/%E1%84%91%E1%85%A2%E1%84%91%E1%85%A2%E1%84%8B%E1%85%A9%E1%84%83%E1%85%A5%20resizing_1.png",
+    thumbnailUrl: "/assets/images/project/패패오더1.jpg",
     generation: 12,
     photos: [
       {
         id: 1,
-        photoUrl:
-          "https://storage.googleapis.com/liklelionericahomepage/projects/%E1%84%91%E1%85%A2%E1%84%91%E1%85%A2%E1%84%8B%E1%85%A9%E1%84%83%E1%85%A5%20resizing_1.png",
+        photoUrl: "/assets/images/project/패패오더1.jpg",
       },
       {
         id: 2,
-        photoUrl:
-          "https://storage.googleapis.com/liklelionericahomepage/projects/%E1%84%91%E1%85%A2%E1%84%91%E1%85%A2%E1%84%8B%E1%85%A9%E1%84%83%E1%85%A5%20resizing_2.png",
+        photoUrl: "/assets/images/project/패패오더2.jpg",
       },
       {
         id: 3,
-        photoUrl:
-          "https://storage.googleapis.com/liklelionericahomepage/projects/%E1%84%91%E1%85%A2%E1%84%91%E1%85%A2%E1%84%8B%E1%85%A9%E1%84%83%E1%85%A5%20resizing_3.png",
+        photoUrl: "/assets/images/project/패패오더3.jpg",
       },
     ],
     projectMembers: [
@@ -192,14 +178,12 @@ export const projects = [
     startDate: "2024. 9",
     endDate: "2024. 12",
     deploymentUrl: "-",
-    thumbnailUrl:
-      "https://storage.googleapis.com/liklelionericahomepage/projects/squeezy%20resizing_2.png",
+    thumbnailUrl: "/assets/images/project/스퀴지.jpg",
     generation: 12,
     photos: [
       {
         id: 1,
-        photoUrl:
-          "https://storage.googleapis.com/liklelionericahomepage/projects/squeezy%20resizing_2.png",
+        photoUrl: "/assets/images/project/스퀴지.jpg",
       },
     ],
     projectMembers: [
@@ -221,14 +205,12 @@ export const projects = [
     startDate: "2024. 9",
     endDate: "2024. 12",
     deploymentUrl: "https://hyu-mealreview.netlify.app",
-    thumbnailUrl:
-      "https://storage.googleapis.com/liklelionericahomepage/projects/Frame.png",
+    thumbnailUrl: "/assets/images/project/학식하냥.jpg",
     generation: 12,
     photos: [
       {
         id: 1,
-        photoUrl:
-          "https://storage.googleapis.com/liklelionericahomepage/projects/Frame.png",
+        photoUrl: "/assets/images/project/학식하냥.jpg",
       },
     ],
     projectMembers: [
