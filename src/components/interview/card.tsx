@@ -27,6 +27,7 @@ export default function InterviewCard({
           src={photoUrl}
           width={176.64}
           height={176.64}
+          quality={100}
           className="w-full h-full object-cover"
           alt=""
         />
