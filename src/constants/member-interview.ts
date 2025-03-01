@@ -2,8 +2,7 @@ export const memberInterviews = [
   {
     id: 1,
     name: "음상훈",
-    photoUrl:
-      "https://storage.googleapis.com/liklelionericahomepage/members/12%E1%84%89%E1%85%A1%E1%86%BC%E1%84%92%E1%85%AE%E1%86%AB.png",
+    photoUrl: "/assets/images/interview/eumsanghoon.jpg",
     role: "대표, 프론트엔드, 백엔드",
     generations: [12],
     interviewDtoList: [
@@ -28,8 +27,7 @@ export const memberInterviews = [
   {
     id: 2,
     name: "이종원",
-    photoUrl:
-      "https://storage.googleapis.com/liklelionericahomepage/members/13%E1%84%8C%E1%85%A9%E1%86%BC%E1%84%8B%E1%85%AF%E1%86%AB.png",
+    photoUrl: "/assets/images/interview/leejongwon.jpg",
     role: "대표, 프론트엔드, 백엔드",
     generations: [13],
     interviewDtoList: [
@@ -41,8 +39,7 @@ export const memberInterviews = [
   {
     id: 3,
     name: "윤현주",
-    photoUrl:
-      "https://storage.googleapis.com/liklelionericahomepage/members/13%E1%84%92%E1%85%A7%E1%86%AB%E1%84%8C%E1%85%AE.png",
+    photoUrl: "/assets/images/interview/yoonhyeonju.jpg",
     role: "부대표, 기획/디자인",
     generations: [12, 13],
     interviewDtoList: [
@@ -68,8 +65,7 @@ export const memberInterviews = [
   {
     id: 4,
     name: "김선후",
-    photoUrl:
-      "https://storage.googleapis.com/liklelionericahomepage/members/13%E1%84%89%E1%85%A5%E1%86%AB%E1%84%92%E1%85%AE.png",
+    photoUrl: "/assets/images/interview/kimseonhu.jpg",
     role: "프론트엔드, 백엔드",
     generations: [12, 13],
     interviewDtoList: [
@@ -95,8 +91,7 @@ export const memberInterviews = [
   {
     id: 5,
     name: "송재현",
-    photoUrl:
-      "https://storage.googleapis.com/liklelionericahomepage/members/13%E1%84%8C%E1%85%A2%E1%84%92%E1%85%A7%E1%86%AB.png",
+    photoUrl: "/assets/images/interview/songjaehyeon.jpg",
     role: "백엔드",
     generations: [12, 13],
     interviewDtoList: [
@@ -121,8 +116,7 @@ export const memberInterviews = [
   {
     id: 6,
     name: "오승아",
-    photoUrl:
-      "https://storage.googleapis.com/liklelionericahomepage/members/12%E1%84%89%E1%85%B3%E1%86%BC%E1%84%8B%E1%85%A1.png",
+    photoUrl: "/assets/images/interview/ohseunga.jpg",
     role: "기획/디자인",
     generations: [12],
     interviewDtoList: [
@@ -147,8 +141,7 @@ export const memberInterviews = [
   {
     id: 7,
     name: "김승민",
-    photoUrl:
-      "https://storage.googleapis.com/liklelionericahomepage/members/13%E1%84%89%E1%85%B3%E1%86%BC%E1%84%86%E1%85%B5%E1%86%AB.png",
+    photoUrl: "/assets/images/interview/kimseungmin.jpg",
     role: "백엔드",
     generations: [13],
     interviewDtoList: [
@@ -160,8 +153,7 @@ export const memberInterviews = [
   {
     id: 8,
     name: "정재민",
-    photoUrl:
-      "https://storage.googleapis.com/liklelionericahomepage/members/13%E1%84%8C%E1%85%A2%E1%84%86%E1%85%B5%E1%86%AB.png",
+    photoUrl: "/assets/images/interview/jeongjaemin.jpg",
     role: "기획/디자인",
     generations: [13],
     interviewDtoList: [
@@ -173,8 +165,7 @@ export const memberInterviews = [
   {
     id: 9,
     name: "송현서",
-    photoUrl:
-      "https://storage.googleapis.com/liklelionericahomepage/members/13%E1%84%92%E1%85%A7%E1%86%AB%E1%84%89%E1%85%A5.png",
+    photoUrl: "/assets/images/interview/songhyeonse.jpg",
     role: "기획/디자인",
     generations: [13],
     interviewDtoList: [
@@ -186,8 +177,7 @@ export const memberInterviews = [
   {
     id: 10,
     name: "김세현",
-    photoUrl:
-      "https://storage.googleapis.com/liklelionericahomepage/members/13%E1%84%89%E1%85%A6%E1%84%92%E1%85%A7%E1%86%AB.png",
+    photoUrl: "/assets/images/interview/kimsehyun.jpg",
     role: "프론트엔드",
     generations: [13],
     interviewDtoList: [
@@ -199,8 +189,7 @@ export const memberInterviews = [
   {
     id: 11,
     name: "송가은",
-    photoUrl:
-      "https://storage.googleapis.com/liklelionericahomepage/members/13%E1%84%89%E1%85%A9%E1%86%BC%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B3%E1%86%AB.png",
+    photoUrl: "/assets/images/interview/songgaeun.jpg",
     role: "프론트엔드",
     generations: [13],
     interviewDtoList: [
@@ -212,8 +201,7 @@ export const memberInterviews = [
   {
     id: 12,
     name: "이가은",
-    photoUrl:
-      "https://storage.googleapis.com/liklelionericahomepage/members/13%E1%84%8B%E1%85%B5%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B3%E1%86%AB.png",
+    photoUrl: "/assets/images/interview/leegaeun.jpg",
     role: "프론트엔드",
     generations: [13],
     interviewDtoList: [
