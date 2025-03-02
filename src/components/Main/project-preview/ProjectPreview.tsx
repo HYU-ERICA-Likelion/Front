@@ -12,7 +12,7 @@ export default function ProjectPreview() {
     <section
       ref={elementRef}
       className={`flex flex-col items-center w-screen overflow-hidden
-                        desktop:h-[1101px] desktop:pt-[100px]
+                        desktop:h-[967px] desktop:pt-[100px]
                         tablet:h-[966px] 
                         mobile:h-[831px] mobile:pt-[124px]
                         transition-opacity duration-1000 ease-in-out ${
