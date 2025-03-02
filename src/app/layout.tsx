@@ -32,6 +32,10 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
+        <meta
+          name="google-site-verification"
+          content="oLfYEMCtERBKIFl-mDMB-Eipxm1EQUZ7LJCSU7VRaFs"
+        />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="멋쟁이사자처럼 한양대 에리카" />
         <meta
