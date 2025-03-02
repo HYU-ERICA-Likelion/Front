@@ -31,6 +31,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
+      <head>
+        <title>멋쟁이사자처럼 :: 한양대 에리카</title>
+      </head>
       <body
         className={`${pretendard.variable} font-pretendard w-dvw h-screen pb-[257px]`}
       >
