@@ -32,8 +32,19 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="멋쟁이사자처럼 한양대 에리카" />
+        <meta
+          name="keywords"
+          content="멋쟁이사자처럼, 한양대 에리카, 한양대학교, 프로그래밍 동아리"
+        />
+        <meta property="og:title" content="멋쟁이사자처럼 :: 한양대 에리카" />
+        <meta property="og:description" content="🦁멋사 ERICA 13기 모집 중🔥" />
+        <meta property="og:image" content="/assets/images/thumbnail.png" />
+        <meta property="og:url" content="https://your-site.com" />
         <title>멋쟁이사자처럼 :: 한양대 에리카</title>
       </head>
+
       <body
         className={`${pretendard.variable} font-pretendard w-dvw h-screen pb-[257px]`}
       >
