@@ -4,6 +4,7 @@ import HeroBanner from "@/components/Main/hero/HeroBanner";
 import RoadMap from "@/components/Main/road-map/RoadMap";
 import TrackOverview from "@/components/Main/track-overview/TrackOverview";
 import ProjectPreview from "@/components/Main/project-preview/ProjectPreview";
+import Sponser from "@/components/Main/sponser/Sponser";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Curriculum />
       <LeadingCrew />
       <ProjectPreview />
+      <Sponser />
     </div>
   );
 }
