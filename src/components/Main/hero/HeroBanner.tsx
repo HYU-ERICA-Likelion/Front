@@ -19,10 +19,10 @@ export default function HeroBanner() {
                        tablet:w-[235px] tablet:h-[53px] tablet:text-[24px]
                        mobile:w-[184px] mobile:h-[45px] mobile:text-[18px]"
         >
-          멋쟁이 사자처럼 13기
+          멋쟁이사자처럼 13기
         </h3>
         <h2 className="flex justify-center items-center tablet:text-[48px] mobile:text-[26px] font-bold text-white tablet:leading-[60px] mobile:leading-[33px] tracking-[-0.005em] text-center">
-          멋쟁이 사자처럼에서 <br /> 13기 아기사자를 모집합니다!
+          멋쟁이사자처럼에서 <br /> 13기 아기사자를 모집합니다!
         </h2>
       </div>
       <div className="absolute desktop:top-[130px] desktop:left-[16%] tablet:top-[160px] tablet:left-[10%] mobile:top-[0] mobile:left-[10%]">
