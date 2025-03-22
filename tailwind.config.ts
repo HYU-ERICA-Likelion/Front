@@ -33,9 +33,38 @@ export default {
           "0%": { transform: "translateY(25%)" },
           "100%": { transform: "translateY(-100%)" },
         },
+
+        modalFadeIn: {
+          "0%": {
+            transform: "scale(0.85) translate(-55%, -60%)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "scale(1) translate(-50%, -50%)",
+            opacity: "1",
+          },
+        },
+        modalFadeOut: {
+          "0%": {
+            transform: "scale(1) translate(-50%, -50%)",
+            opacity: "1",
+          },
+          "100%": {
+            transform: "scale(0.85) translate(-55%, -60%)",
+            opacity: "0",
+          },
+        },
+
+        showBackDrop: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
       },
       animation: {
         endingCredit: "scroll 30s linear infinite",
+        modalFadeIn: "modalFadeIn 0.4s ease forwards",
+        modalFadeOut: "modalFadeOut 0.4s ease forwards",
+        showBackDrop: "showBackDrop 0.4s ease forwards",
       },
     },
   },

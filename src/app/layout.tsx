@@ -55,6 +55,7 @@ export default function RootLayout({
         <NavigationHeader />
         <main>{children}</main>
         <Footer />
+        <div id="modal-root"></div>
       </body>
     </html>
   );
