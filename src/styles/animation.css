@@ -11,8 +11,4 @@
       opacity: 1;
     }
   }
-  dialog::backdrop {
-    background-color: rgba(0, 0, 0, 0.8);
-    animation: showBackdrop 0.4s ease forwards;
-  }
 }
