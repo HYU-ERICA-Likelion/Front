@@ -25,7 +25,7 @@ export default function PrModal({ toggle, isOpen }: Props) {
   }, [isOpen]);
 
   return (
-    <div className="flex flex-col items-center bg-[#292725] w-auto min-h-[955px] rounded-[14px] p-[18px] gap-[24px]">
+    <div className="flex flex-col items-center bg-[#292725] w-auto min-h-[955px] rounded-[14px] p-[18px] gap-[24px] overflow-hiddne">
       {/* 프로젝트 제목 */}
       <div className="flex justify-between items-center justify-between w-[686px]">
         <p className="text-[18px] text-[#D1D0D0] font-[600] tracking-[-0.09px] ">
@@ -216,6 +216,7 @@ export default function PrModal({ toggle, isOpen }: Props) {
             isFormValid ? "bg-[#F08314]" : "bg-[#5E5A5A]"
           }`}
           disabled={!isFormValid}
+          onClick={toggle}
         >
           <p className="text-[24px] font-[600] text-[#FFFFFF] leading-[25px] tracking-[-0.12px]">
             작성 완료
