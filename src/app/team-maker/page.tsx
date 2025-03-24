@@ -1,19 +1,34 @@
 "use client";
 
-import Modal from "@/components/Common/Modal";
-import useToggle from "@/hooks/useToggle";
-import React from "react";
+import { useState } from "react";
+import MatchingIntro from "@/components/TeamMaker/MatchingIntro";
+import TeamSetupForm from "@/components/TeamMaker/TeamSetupForm";
+import { TeamDTO } from "@/types/team-maker";
 
 export default function TeamMakerPage() {
-  const { isOpen, toggle } = useToggle();
+  const [teamList, setTeamList] = useState<TeamDTO[]>([
+    {
+      design: 0,
+      frontend: 0,
+      backend: 0,
+    },
+  ]);
 
   return (
     <>
-      <button onClick={toggle}>Modal Open</button>
-
-      <Modal isOpen={isOpen} toggle={toggle}>
-        <div className="w-[400px] h-[300px] bg-white">TeamMaker Modal</div>
-      </Modal>
+      <section>
+        <MatchingIntro />
+        <div>
+          {teamList.map((teamDTO, idx) => (
+            <TeamSetupForm
+              key={`team-${idx}`}
+              teamDTO={teamDTO}
+              setTeamList={setTeamList}
+              teamNum={idx + 1}
+            />
+          ))}
+        </div>
+      </section>
     </>
   );
 }
