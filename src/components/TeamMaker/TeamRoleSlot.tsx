@@ -1,3 +1,4 @@
+import PlusIcon from "@/assets/PlusIcon";
 import { TeamRoleSlotProps } from "@/types/team-maker";
 
 export default function TeamRoleSlot({
@@ -14,19 +15,35 @@ export default function TeamRoleSlot({
       : "design";
 
   const handleIncrement = () => {
-    // setRoleList((prev) =>
-    //   prev.map((item) =>
-    //     item.role === part.role ? { ...item, count: item.count + 1 } : item
-    //   )
-    // );
+    setTeamList((prev) => {
+      const newTeamList = [...prev].map((team, idx) => {
+        if (idx === teamNum - 1) {
+          return {
+            ...team,
+            [partMapping]: team[partMapping] + 1,
+          };
+        }
+        return team;
+      });
+
+      return newTeamList;
+    });
   };
 
   const handleDecreament = () => {
-    // setRoleList((prev) =>
-    //   prev.map((item) =>
-    //     item.role === part.role ? { ...item, count: item.count - 1 } : item
-    //   )
-    // );
+    setTeamList((prev) => {
+      const newTeamList = [...prev].map((team, idx) => {
+        if (idx === teamNum - 1) {
+          return {
+            ...team,
+            [partMapping]: team[partMapping] - 1,
+          };
+        }
+        return team;
+      });
+
+      return newTeamList;
+    });
   };
 
   return (
@@ -64,8 +81,7 @@ export default function TeamRoleSlot({
           className="relative w-[24px] h-[24px]"
           onClick={handleIncrement}
         >
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[14px] h-[2px] rounded-[100px] bg-white" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[14px] h-[2px] rounded-[100px] bg-white rotate-90" />
+          <PlusIcon />
         </button>
       </div>
     </div>
