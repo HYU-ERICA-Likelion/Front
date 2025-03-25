@@ -106,3 +106,30 @@ dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.8);
   animation: showBackdrop 0.5s ease forwards;
 }
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.flip-card {
+  transform-style: preserve-3d;
+  transition: transform 0.7s;
+  position: relative;
+  width: 400px;
+  height: 387px;
+}
+
+/* Chrome, Edge, Safari */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+.scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE, Edge */
+}

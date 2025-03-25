@@ -25,7 +25,7 @@ export default function PrModal({ toggle, isOpen }: Props) {
   }, [isOpen]);
 
   return (
-    <div className="flex flex-col items-center bg-[#292725] w-auto min-h-[955px] rounded-[14px] p-[18px] gap-[24px] overflow-hiddne">
+    <div className="flex flex-col items-center bg-[#292725] w-auto min-h-[955px] rounded-[14px] p-[18px] gap-[24px]">
       {/* 프로젝트 제목 */}
       <div className="flex justify-between items-center justify-between w-[686px]">
         <p className="text-[18px] text-[#D1D0D0] font-[600] tracking-[-0.09px] ">
@@ -129,6 +129,7 @@ export default function PrModal({ toggle, isOpen }: Props) {
                   width={16}
                   height={16}
                   alt="arrow"
+                  className="cursor-pointer"
                   onClick={() => setPartToggle((prev) => !prev)}
                 />
 

@@ -4,6 +4,7 @@ import { useState } from "react";
 import PartInput from "./PartInput";
 import ImageInput from "./ImageInput";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 export default function PostInput() {
@@ -16,6 +17,9 @@ export default function PostInput() {
   const [backAppNum, setBackAppNum] = useState<number>(0);
   const [selectedImg, setSelectedImg] = useState<string>("");
   const [groupChatLink, setGroupChatLink] = useState<string>("");
+  const partData = ["기획&디자인", "프론트엔드", "백엔드"];
+  const [partToggle, setPartToggle] = useState(false);
+  const [part, setPart] = useState("");
   const isFormValid: boolean =
     topic.trim() !== "" &&
     nickname.trim() !== "" &&
@@ -110,6 +114,59 @@ export default function PostInput() {
           onChange={(e) => setContent(e.target.value)}
           className="h-[289px] px-[17px] py-[13px] resize-none rounded-[10px] border-[1px] border-[#D0D0D0] bg-[#FFFFFF] text-[#000] placeholder:text-[#9F9E9D] placeholder:text-[20px] placeholder:font-[500] text-[20px] font-[400] leading-[140%] tracking-[-0.1px]"
         />
+      </div>
+
+      {/* 본인 파트 선택 */}
+      <div className="flex gap-[118px] w-[863px] items-center">
+        <p className="text-[20px] font-[600] leading-[140%] tracking-[-0.1px] text-[#FFFFFF]">
+          파트
+        </p>
+        <div
+          className={`w-[710px] h-[44px] bg-[#ffffff] py-[13px] pl-[17px] pr-[12px] border border-[#CFCFCF] flex items-center justify-between relative z-10 ${
+            partToggle ? "rounded-t-[5px]" : "rounded-[5px]"
+          }`}
+        >
+          {/* 선택된 값 & 아이콘 */}
+          <p
+            className={`text-[20px] font-[500] ${
+              part ? "text-[#000]" : "text-[#9F9E9D]"
+            } leading-[140%] tracking-[-0.1px]`}
+          >
+            {part ? part : "본인의 파트를 선택해주세요."}
+          </p>
+          <Image
+            src={
+              partToggle
+                ? "/assets/icons/pr_left_arrow.svg"
+                : "/assets/icons/pr_down_arrow.svg"
+            }
+            width={16}
+            height={16}
+            alt="arrow"
+            className="cursor-pointer"
+            onClick={() => setPartToggle((prev) => !prev)}
+          />
+
+          {/* 드롭다운 메뉴 (absolute) */}
+          {partToggle && (
+            <div className="absolute w-[710px] h-[132px] bg-[#ffffff] rounded-b-[5px] border border-[#CFCFCF] border-t-0 flex flex-col top-[43.44px] left-[-1px]">
+              {partData.map((pd, index) => (
+                <div
+                  key={index}
+                  className="w-full h-[44px] bg-[#FFFFFF] p-[12px] cursor-pointer"
+                  onClick={() => {
+                    setPart(pd);
+                    setPartToggle(false);
+                  }}
+                >
+                  <p className="text-[20px] font-[500] text-[#9F9E9D] leading-[140%] tracking-[-0.1px] hover:text-[#474343]">
+                    {pd}
+                  </p>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
 
       {/* 구하는 파트 */}
