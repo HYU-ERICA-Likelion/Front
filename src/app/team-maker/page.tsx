@@ -4,7 +4,6 @@ import { useState } from "react";
 import MatchingIntro from "@/components/TeamMaker/MatchingIntro";
 import TeamSetupForm from "@/components/TeamMaker/TeamSetupForm";
 import { TeamDTO } from "@/types/team-maker";
-import PlusIcon from "@/assets/PlusIcon";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
@@ -52,9 +51,14 @@ export default function TeamMakerPage() {
           {/* 팀 추가 버튼 */}
           <button
             onClick={handleAddTeam}
-            className="bg-gray4 rounded-[12px] tablet:w-[458px] tablet:h-[64px] tablet:mt-[10px]"
+            className="flex justify-center items-center bg-gray4 rounded-[12px] tablet:w-[458px] tablet:h-[64px] tablet:mt-[10px]"
           >
-            <PlusIcon width={29} height={4} />
+            <Image
+              src="/assets/icons/plus.svg"
+              width="50"
+              height="50"
+              alt="plus-icon"
+            />
           </button>
         </div>
 

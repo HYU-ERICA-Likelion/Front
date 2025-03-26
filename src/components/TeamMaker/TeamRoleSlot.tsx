@@ -1,5 +1,5 @@
-import PlusIcon from "@/assets/PlusIcon";
 import { TeamRoleSlotProps } from "@/types/team-maker";
+import Image from "next/image";
 
 export default function TeamRoleSlot({
   role,
@@ -81,7 +81,13 @@ export default function TeamRoleSlot({
           className="relative w-[24px] h-[24px]"
           onClick={handleIncrement}
         >
-          <PlusIcon />
+          {/* <PlusIcon /> */}
+          <Image
+            src="/assets/icons/plus.svg"
+            width="24"
+            height="24"
+            alt="plus-icon"
+          />
         </button>
       </div>
     </div>
