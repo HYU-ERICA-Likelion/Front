@@ -55,6 +55,20 @@ ol {
   list-style: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+p,
+span,
+strong {
+  letter-spacing: -0.005em;
+}
+
 /* 메인 페이지 캐러셀 base css */
 .slick-prev:before,
 .slick-next:before {
