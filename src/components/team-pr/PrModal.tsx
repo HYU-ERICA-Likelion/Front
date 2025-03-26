@@ -45,22 +45,6 @@ export default function PrModal({ toggle, isOpen }: Props) {
       <div className="flex items-center justify-center">
         <div className="bg-[#CFCFCF] w-[686px] h-[384px] rounded-[10px]"></div>
         <div className="absolute justify-between flex items-center w-[640px]">
-          <div className="w-[44px] h-[44px] rounded-[84px] bg-[rgba(0,0,0,0.06)] cursor-pointer z-10 flex items-center justify-center">
-            <Image
-              src="/assets/icons/carousel-prev-arrow.svg"
-              width={11.78}
-              height={20}
-              alt="next-arrow"
-            />
-          </div>
-          <div className="w-[44px] h-[44px] rounded-[84px] bg-[rgba(0,0,0,0.06)] cursor-pointer z-10 flex items-center justify-center">
-            <Image
-              src="/assets/icons/carousel-next-arrow.svg"
-              width={11.78}
-              height={20}
-              alt="next-arrow"
-            />
-          </div>
         </div>
       </div>
 
@@ -69,7 +53,7 @@ export default function PrModal({ toggle, isOpen }: Props) {
         <div className="flex flex-col justify-center gap-[38px]">
           <div className="flex flex-col justify-center w-[453px] justify-start gap-[17px]">
             <div className="flex items-center gap-[12px] ">
-              <p className="text-[24px] font-bold tracking-[-0.09px]">주제</p>
+              <p className="text-[24px] font-bold tracking-[-0.09px] text-[#ffffff]">주제</p>
               <p className="text-[#919191] font-[600] text-[18px] tracking-[-0.09px]">
                 WEB
               </p>
@@ -202,9 +186,9 @@ export default function PrModal({ toggle, isOpen }: Props) {
             <Link
               href="https://open.kakao.com/o/s95Dnyyg"
               target="_blank"
-              className="w-[155px] text-[16px] font-[600] text-[#FFFFFF] leading-[140%] tracking-[-0.08px] line-clamp-1"
+              className="w-[150px] text-[16px] font-[600] text-[#FFFFFF] leading-[140%] tracking-[-0.08px] overflow-hidden text-ellipsis whitespace-nowrap"
             >
-              URLURLURLURLURLURLURLURLURL
+              https://open.kakao.com/o/s95Dnyyg
             </Link>
           </div>
         </div>

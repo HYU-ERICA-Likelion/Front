@@ -79,11 +79,16 @@ export default function PrView() {
           ref={scrollRef}
           className="flex gap-[40px] overflow-x-auto px-[60px] scroll-smooth scrollbar-hide"
           style={{
-            paddingLeft: "calc(50% - 200px)", // 카드 너비 절반 (400px / 2)
+            paddingLeft: "calc(50% - 200px)",
+            paddingRight: "calc(50% - 200px)",
           }}
         >
           {data.map((item, index) => {
             const isFlipped = index !== centerIndex;
+            const backImage = ["/assets/images/card_back_front.svg",
+              "/assets/images/card_back_back.svg",
+              "/assets/images/card_back_design.svg",]
+            const backgroundImage = backImage[index % backImage.length]
             return (
               <div key={index} className="[perspective:1000px] cursor-pointer">
                 <div
@@ -114,7 +119,14 @@ export default function PrView() {
                   <div
                     className="absolute w-full h-full backface-hidden rotate-y-180 rounded-[20px] bg-[#474343] flex items-center justify-center text-gray-700 font-bold text-xl"
                     style={{ backfaceVisibility: "hidden" }}
-                  ></div>
+                  >
+                    <Image
+                      src={backgroundImage}
+                      width={400}
+                      height={364}
+                      alt="card-back"
+                    />
+                  </div>
                 </div>
               </div>
             );
