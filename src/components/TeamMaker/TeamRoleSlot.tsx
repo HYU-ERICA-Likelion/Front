@@ -20,7 +20,7 @@ export default function TeamRoleSlot({
         if (idx === teamNum - 1) {
           return {
             ...team,
-            [partMapping]: team[partMapping] + 1,
+            [partMapping]: (team[partMapping] as number) + 1,
           };
         }
         return team;
@@ -36,7 +36,7 @@ export default function TeamRoleSlot({
         if (idx === teamNum - 1) {
           return {
             ...team,
-            [partMapping]: team[partMapping] - 1,
+            [partMapping]: (team[partMapping] as number) - 1,
           };
         }
         return team;
