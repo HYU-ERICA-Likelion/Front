@@ -33,7 +33,7 @@ export default function PostInput() {
   return (
     <div className="flex flex-col gap-[32px] px-[208px] py-[152px] items-center">
       {/* 제목 */}
-      <div className="flex gap-[118px] items-center">
+      <div className="tablet:flex gap-[118px] items-center">
         <label
           htmlFor="topic"
           className="text-[20px] font-[600] leading-[140%] tracking-[-0.1px] text-[#FFFFFF]"

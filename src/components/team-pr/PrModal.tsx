@@ -25,7 +25,7 @@ export default function PrModal({ toggle, isOpen }: Props) {
   }, [isOpen]);
 
   return (
-    <div className="flex flex-col items-center bg-[#292725] w-auto min-h-[955px] rounded-[14px] p-[18px] gap-[24px]">
+    <div className="flex flex-col items-center bg-[#292725] w-[292px] tablet:w-auto min-h-[955px] rounded-[14px] p-[12px] tablet:p-[18px] gap-[16px] tablet:gap-[24px]">
       {/* 프로젝트 제목 */}
       <div className="flex justify-between items-center justify-between w-[268px] tablet:w-[686px]">
         <p className="text-[18px] text-[#D1D0D0] font-[600] tracking-[-0.09px] ">
@@ -43,23 +43,23 @@ export default function PrModal({ toggle, isOpen }: Props) {
 
       {/* 프로젝트 이미지 */}
       <div className="flex items-center justify-center">
-        <div className="bg-[#CFCFCF] w-[222px] tablet:w-[686px] h-[384px] rounded-[10px]"></div>
+        <div className="bg-[#CFCFCF] w-[268px] tablet:w-[686px] h-[150px] tablet:h-[384px] rounded-[10px]"></div>
         <div className="absolute justify-between flex items-center w-[640px]">
         </div>
       </div>
 
       {/* 프로젝트 설명 */}
-      <div className="flex items-center justify-center gap-[26px]">
-        <div className="flex flex-col justify-center gap-[38px]">
-          <div className="flex flex-col justify-center w-[268px] tablet:w-[453px] justify-start gap-[17px]">
+      <div className="flex flex-col tablet:flex-row items-center justify-center gap-[16px] tablet:gap-[26px]">
+        <div className="flex flex-col justify-center gap-[16px] tablet:gap-[38px] w-[268px] tablet:w-[453px]">
+          <div className="flex flex-col justify-center justify-start gap-[16px]">
             <div className="flex items-center gap-[12px] ">
-              <p className="text-[24px] font-bold tracking-[-0.09px] text-[#ffffff]">주제</p>
-              <p className="text-[#919191] font-[600] text-[18px] tracking-[-0.09px]">
+              <p className="text-[20px] tablet:text-[24px] font-bold tracking-[-0.09px] text-[#ffffff]">주제</p>
+              <p className="text-[#919191] font-[600] text-[15px] tablet:text-[18px] tracking-[-0.09px]">
                 WEB
               </p>
             </div>
-            <div className="w-[453px] ">
-              <p className="text-[#D1D0D0] text-[18px] font-500 tracking-[-0.09px] leading-[<145%>]">
+            <div className="w-[268px] tablet:w-[453px] ">
+              <p className="text-[16px] text-[#D1D0D0] tablet:text-[18px] font-500 tracking-[-0.09px] leading-[<145%>]">
                 설명을 주르륵 적어 놓아 볼까요 와이어프레임이 내 머릿속 그대로
                 그려졌으면 이 시스템은 사용자가 원하는 주제를 등록하고, 참여자를
                 모집하여 팀을 구성할 수 있도록 지원합니다. 주제별 참여 요청을
@@ -72,7 +72,7 @@ export default function PrModal({ toggle, isOpen }: Props) {
           </div>
 
           {/* 닉네임 & 파트 */}
-          <div className="flex justify-center gap-[20px] px-[25px] py-[20px] bg-[#474343] rounded-[6px]">
+          <div className="flex flex-col tablet:flex-row justify-center gap-[20px] px-[25px] py-[20px] bg-[#474343] rounded-[6px]">
             <div className="flex flex-col justify-center gap-[8px]">
               <p className="text-[16px] font-[600] tracking-[-0.09px] text-[#CFCFCF]">
                 닉네임
@@ -142,9 +142,9 @@ export default function PrModal({ toggle, isOpen }: Props) {
         </div>
 
         {/* 모집 파트 쪽 */}
-        <div className=" w-[195px] flex flex-col gap-[20px]">
+        <div className="w-[268px] tablet:w-[195px] flex flex-col gap-[20px]">
           {/* 모집 파트 인원 */}
-          <div className="w-[195px] h-[256px] bg-[#474343] rounded-[10px] p-[20px]">
+          <div className="w-[268px] tablet:w-[195px] h-[256px] bg-[#474343] rounded-[10px] p-[20px]">
             <p className="text-[18px] font-[600] text-[#FFFFFF] leading-[140%] tracking-[-0.09px]">
               모집하는 파트
             </p>
@@ -179,14 +179,14 @@ export default function PrModal({ toggle, isOpen }: Props) {
           </div>
 
           {/* 오픈채팅방 링크 */}
-          <div className="w-[195px] h-[86px] bg-[#474343] rounded-[10px] p-[20px] flex flex-col gap-[4px]">
+          <div className="w-[268px] tablet:w-[195px] h-[86px] bg-[#474343] rounded-[10px] p-[20px] flex flex-col gap-[4px]">
             <p className="text-[14px] font-[600] text-[#9F9E9D] leading-[140%] tracking-[-0.07px]">
               오픈채팅방 링크
             </p>
             <Link
               href="https://open.kakao.com/o/s95Dnyyg"
               target="_blank"
-              className="w-[150px] text-[16px] font-[600] text-[#FFFFFF] leading-[140%] tracking-[-0.08px] overflow-hidden text-ellipsis whitespace-nowrap"
+              className="w-[230px] tablet:w-[150px] text-[16px] font-[600] text-[#FFFFFF] leading-[140%] tracking-[-0.08px] overflow-hidden text-ellipsis whitespace-nowrap"
             >
               https://open.kakao.com/o/s95Dnyyg
             </Link>
@@ -195,23 +195,23 @@ export default function PrModal({ toggle, isOpen }: Props) {
       </div>
 
       {/* 버튼 모음 */}
-      <div className="flex gap-[28px]">
+      <div className="flex gap-[12px] tablet:gap-[28px]">
         <button
-          className={`w-[153px] h-[57px] px-[16px] py-[32px] rounded-[40px] flex gap-[4px] justify-center items-center ${
+          className={`w-[89px] tablet:w-[153px] h-[34px] tablet:h-[57px] px-[10px] tablet:px-[16px] py-[22px] tablet:py-[32px] rounded-[40px] flex gap-[4px] justify-center items-center ${
             isFormValid ? "bg-[#F08314]" : "bg-[#5E5A5A]"
           }`}
           disabled={!isFormValid}
           onClick={toggle}
         >
-          <p className="text-[24px] font-[600] text-[#FFFFFF] leading-[25px] tracking-[-0.12px]">
+          <p className="text:[12px] tablet:text-[24px] font-[600] text-[#FFFFFF] leading-[25px] tracking-[-0.12px]">
             작성 완료
           </p>
         </button>
         <button
           onClick={toggle}
-          className="w-[153px] h-[57px] px-[16px] py-[32px] bg-[#5E5A5A] rounded-[40px] flex gap-[4px] justify-center items-center"
+          className="w-[89px] tablet:w-[153px] h-[34px] tablet:h-[57px] px-[10px] tablet:px-[16px] py-[22px] tablet:py-[32px] bg-[#5E5A5A] rounded-[40px] flex gap-[4px] justify-center items-center"
         >
-          <p className="text-[24px] font-[600] text-[#FFFFFF] leading-[25px] tracking-[-0.12px]">
+          <p className="text:[12px] tablet:text-[24px] font-[600] text-[#FFFFFF] leading-[25px] tracking-[-0.12px]">
             취소하기
           </p>
         </button>
