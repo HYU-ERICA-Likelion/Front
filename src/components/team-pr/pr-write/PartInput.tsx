@@ -41,7 +41,7 @@ export default function PartInput({
                   setDesignAppNum(value === "" ? 0 : Number(value));
                 }
               }}
-              className="placehodler:text-[#9F9E9D] placeholder:text-[20px] placeholder:font-[500] leading-[140%] tracking-[-0.1px] text-[#000] w-[60px] h-[54px] py-[13px] pl-[17px] pr-[20px] rounded-[10px] border-[1px] border-[#D0D0D0] bg-[#FFFFFF] flex justify-center items-center gap-[33px]"
+              className="focus:text-[#474343] placehodler:text-[#9F9E9D] placeholder:text-[20px] placeholder:font-[500] leading-[140%] tracking-[-0.1px] text-[#000] w-[60px] h-[54px] py-[13px] pl-[17px] pr-[20px] rounded-[10px] border-[1px] border-[#D0D0D0] bg-[#FFFFFF] flex justify-center items-center gap-[33px]"
             />
             <span className="text-[20px] font-[500] leading-[140%] tracking-[-0.1px] text-[#FFFFFF]">
               명
@@ -69,7 +69,7 @@ export default function PartInput({
                   setFrontAppNum(value === "" ? 0 : Number(value));
                 }
               }}
-              className="placehodler:text-[#9F9E9D] placeholder:text-[20px] placeholder:font-[500] leading-[140%] tracking-[-0.1px] text-[#000] w-[60px] h-[54px] py-[13px] pl-[17px] pr-[20px] rounded-[10px] border-[1px] border-[#D0D0D0] bg-[#FFFFFF] flex justify-center items-center gap-[33px] appearance-none"
+              className="focus:text-[#474343] placehodler:text-[#9F9E9D] placeholder:text-[20px] placeholder:font-[500] leading-[140%] tracking-[-0.1px] text-[#000] w-[60px] h-[54px] py-[13px] pl-[17px] pr-[20px] rounded-[10px] border-[1px] border-[#D0D0D0] bg-[#FFFFFF] flex justify-center items-center gap-[33px] appearance-none"
             />
             <span className="text-[20px] font-[500] leading-[140%] tracking-[-0.1px] text-[#FFFFFF]">
               명
@@ -97,7 +97,7 @@ export default function PartInput({
                   setBackAppNum(value === "" ? 0 : Number(value));
                 }
               }}
-              className="placehodler:text-[#9F9E9D] placeholder:text-[20px] placeholder:font-[500] leading-[140%] tracking-[-0.1px] text-[#000] w-[60px] h-[54px] py-[13px] pl-[17px] pr-[20px] rounded-[10px] border-[1px] border-[#D0D0D0] bg-[#FFFFFF] flex justify-center items-center gap-[33px]"
+              className="focus:text-[#474343] placehodler:text-[#9F9E9D] placeholder:text-[20px] placeholder:font-[500] leading-[140%] tracking-[-0.1px] text-[#000] w-[60px] h-[54px] py-[13px] pl-[17px] pr-[20px] rounded-[10px] border-[1px] border-[#D0D0D0] bg-[#FFFFFF] flex justify-center items-center gap-[33px]"
             />
             <span className="text-[20px] font-[500] leading-[140%] tracking-[-0.1px] text-[#FFFFFF]">
               명

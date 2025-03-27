@@ -27,7 +27,7 @@ export default function PrModal({ toggle, isOpen }: Props) {
   return (
     <div className="flex flex-col items-center bg-[#292725] w-auto min-h-[955px] rounded-[14px] p-[18px] gap-[24px]">
       {/* 프로젝트 제목 */}
-      <div className="flex justify-between items-center justify-between w-[686px]">
+      <div className="flex justify-between items-center justify-between w-[268px] tablet:w-[686px]">
         <p className="text-[18px] text-[#D1D0D0] font-[600] tracking-[-0.09px] ">
           Project
         </p>
@@ -43,7 +43,7 @@ export default function PrModal({ toggle, isOpen }: Props) {
 
       {/* 프로젝트 이미지 */}
       <div className="flex items-center justify-center">
-        <div className="bg-[#CFCFCF] w-[686px] h-[384px] rounded-[10px]"></div>
+        <div className="bg-[#CFCFCF] w-[222px] tablet:w-[686px] h-[384px] rounded-[10px]"></div>
         <div className="absolute justify-between flex items-center w-[640px]">
         </div>
       </div>
@@ -51,7 +51,7 @@ export default function PrModal({ toggle, isOpen }: Props) {
       {/* 프로젝트 설명 */}
       <div className="flex items-center justify-center gap-[26px]">
         <div className="flex flex-col justify-center gap-[38px]">
-          <div className="flex flex-col justify-center w-[453px] justify-start gap-[17px]">
+          <div className="flex flex-col justify-center w-[268px] tablet:w-[453px] justify-start gap-[17px]">
             <div className="flex items-center gap-[12px] ">
               <p className="text-[24px] font-bold tracking-[-0.09px] text-[#ffffff]">주제</p>
               <p className="text-[#919191] font-[600] text-[18px] tracking-[-0.09px]">
@@ -142,7 +142,7 @@ export default function PrModal({ toggle, isOpen }: Props) {
         </div>
 
         {/* 모집 파트 쪽 */}
-        <div className="w-[195px] flex flex-col gap-[20px]">
+        <div className=" w-[195px] flex flex-col gap-[20px]">
           {/* 모집 파트 인원 */}
           <div className="w-[195px] h-[256px] bg-[#474343] rounded-[10px] p-[20px]">
             <p className="text-[18px] font-[600] text-[#FFFFFF] leading-[140%] tracking-[-0.09px]">

@@ -117,7 +117,7 @@ export default function PrView() {
 
                   {/* 뒷면 */}
                   <div
-                    className="absolute w-full h-full backface-hidden rotate-y-180 rounded-[20px] bg-[#474343] flex items-center justify-center text-gray-700 font-bold text-xl"
+                    className="hidden tablet:block absolute w-full h-full backface-hidden rotate-y-180 rounded-[20px] bg-[#474343] flex items-center justify-center text-gray-700 font-bold text-xl"
                     style={{ backfaceVisibility: "hidden" }}
                   >
                     <Image

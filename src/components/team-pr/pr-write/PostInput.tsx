@@ -46,7 +46,7 @@ export default function PostInput() {
           value={topic}
           placeholder="제목을 입력해주세요."
           onChange={(e) => setTopic(e.target.value)}
-          className="placeholder:text-[#9F9E9D] placeholder:text-[20px] placeholder:font-[500] text-[#000] w-[710px] h-[54px] px-[17px] py-[13px] flex gap-[10px] items-center rounded-[10px] border-[1px] border-[#D0D0D0] bg-[#FFFFFF]"
+          className="focus:text-[#474343] placeholder:text-[#9F9E9D] placeholder:text-[20px] placeholder:font-[500] text-[#000] w-[710px] h-[54px] px-[17px] py-[13px] flex gap-[10px] items-center rounded-[10px] border-[1px] border-[#D0D0D0] bg-[#FFFFFF]"
         />
       </div>
 
@@ -89,7 +89,7 @@ export default function PostInput() {
             value={nickname}
             placeholder="닉네임을 입력해주세요."
             onChange={(e) => setNickname(e.target.value)}
-            className="placeholder:text-[#9F9E9D] placeholder:text-[20px] placeholder:font-[500] text-[#000] w-[710px] h-[54px] px-[17px] py-[13px] flex gap-[10px] items-center rounded-[10px] border-[1px] border-[#D0D0D0] bg-[#FFFFFF]"
+            className="focus:text-[#474343] placeholder:text-[#9F9E9D] placeholder:text-[20px] placeholder:font-[500] text-[#000] w-[710px] h-[54px] px-[17px] py-[13px] flex gap-[10px] items-center rounded-[10px] border-[1px] border-[#D0D0D0] bg-[#FFFFFF]"
           />
         </div>
         <div className="flex ml-[153px]">
@@ -112,7 +112,7 @@ export default function PostInput() {
           value={content}
           placeholder="내용을 입력해주세요."
           onChange={(e) => setContent(e.target.value)}
-          className="h-[289px] px-[17px] py-[13px] resize-none rounded-[10px] border-[1px] border-[#D0D0D0] bg-[#FFFFFF] text-[#000] placeholder:text-[#9F9E9D] placeholder:text-[20px] placeholder:font-[500] text-[20px] font-[400] leading-[140%] tracking-[-0.1px]"
+          className="focus:text-[#474343] h-[289px] px-[17px] py-[13px] resize-none rounded-[10px] border-[1px] border-[#D0D0D0] bg-[#FFFFFF] text-[#000] placeholder:text-[#9F9E9D] placeholder:text-[20px] placeholder:font-[500] text-[20px] font-[400] leading-[140%] tracking-[-0.1px]"
         />
       </div>
 
@@ -122,9 +122,10 @@ export default function PostInput() {
           파트
         </p>
         <div
-          className={`w-[710px] h-[44px] bg-[#ffffff] py-[13px] pl-[17px] pr-[12px] border border-[#CFCFCF] flex items-center justify-between relative z-10 ${
-            partToggle ? "rounded-t-[5px]" : "rounded-[5px]"
+          className={`w-[710px] h-[44px] bg-[#ffffff] py-[13px] pl-[17px] pr-[12px] border border-[#CFCFCF] flex items-center justify-between relative z-10 cursor-pointer ${
+            partToggle ? "rounded-t-[10px]" : "rounded-[10px]"
           }`}
+          onClick={() => setPartToggle((prev) => !prev)}
         >
           {/* 선택된 값 & 아이콘 */}
           <p
@@ -144,16 +145,16 @@ export default function PostInput() {
             height={16}
             alt="arrow"
             className="cursor-pointer"
-            onClick={() => setPartToggle((prev) => !prev)}
+            
           />
 
           {/* 드롭다운 메뉴 (absolute) */}
           {partToggle && (
-            <div className="absolute w-[710px] h-[132px] bg-[#ffffff] rounded-b-[5px] border border-[#CFCFCF] border-t-0 flex flex-col top-[43.44px] left-[-1px]">
+            <div className="absolute w-[710px] h-[162px] rounded-b-[10px] bg-[#ffffff] border border-[#CFCFCF] border-t-0 flex flex-col top-[43.44px] left-[-1px]">
               {partData.map((pd, index) => (
                 <div
                   key={index}
-                  className="w-full h-[44px] bg-[#FFFFFF] p-[12px] cursor-pointer"
+                  className="w-full h-[54px] bg-[#FFFFFF] px-[17px] py-[13px] cursor-pointer rounded-b-[10px]"
                   onClick={() => {
                     setPart(pd);
                     setPartToggle(false);
@@ -196,7 +197,7 @@ export default function PostInput() {
           value={groupChatLink}
           placeholder="1대1 오픈채팅방 링크를 넣어주세요."
           onChange={(e) => setGroupChatLink(e.target.value)}
-          className="placeholder:text-[#9F9E9D] placeholder:text-[20px] placeholder:font-[500] text-[#000] w-[710px] h-[54px] px-[17px] py-[13px] flex gap-[10px] items-center rounded-[10px] border-[1px] border-[#D0D0D0] bg-[#FFFFFF]"
+          className="focus:text-[#474343] placeholder:text-[#9F9E9D] placeholder:text-[20px] placeholder:font-[500] text-[#000] w-[710px] h-[54px] px-[17px] py-[13px] flex gap-[10px] items-center rounded-[10px] border-[1px] border-[#D0D0D0] bg-[#FFFFFF]"
         />
       </div>
 
