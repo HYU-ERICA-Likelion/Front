@@ -27,10 +27,10 @@ export default function ImageInput({ setSelectedImg }: Props) {
     setSelectedFile(null);
   };
   return (
-    <div className="flex gap-[101px] items-center w-[863px]">
+    <div className="flex flex-col tablet:flex-row gap-[8px] tablet:gap-[101px] items-start tablet:items-center w-[298px] tablet:w-[528px] desktop:w-[863px]">
       <label
         htmlFor="img"
-        className="text-[20px] font-[600] leading-[140%] tracking-[-0.1px] text-[#FFFFFF]"
+        className="text-[16px] tablet:text-[20px] font-[600] leading-[140%] tracking-[-0.1px] text-[#FFFFFF]"
       >
         이미지
       </label>
@@ -38,12 +38,12 @@ export default function ImageInput({ setSelectedImg }: Props) {
         {!selectedFile ? (
           <label
             htmlFor="img"
-            className="bg-[#F08314] text-[20px] font-[700] leading-[140%] tracking-[-0.1px] text-[#FFFFFF] px-[17px] py-[13px] rounded-[10px] cursor-pointer w-[154px] flex items-center justify-center"
+            className="bg-[#F08314] text-[16px] tablet:text-[20px] font-[700] leading-[140%] tracking-[-0.1px] text-[#FFFFFF] px-[17px] py-[13px] rounded-[10px] cursor-pointer w-[154px] flex items-center justify-center"
           >
             이미지 첨부
           </label>
         ) : (
-          <div className="flex items-center bg-[#FFFFFF] px-[17px] py-[13px] rounded-[10px] border-[1px] border-[#D0D0D0] w-[710px] justify-between">
+          <div className="flex items-center bg-[#FFFFFF] px-[17px] py-[13px] rounded-[10px] border-[1px] border-[#D0D0D0] w-[298px] tablet:w-[375px] desktop:w-[710px] justify-between">
             <span className="text-[20px] font-[500] text-[#000000] leading-[140%] tracking-[-0.1px]">
               {selectedFile.name}
             </span>
