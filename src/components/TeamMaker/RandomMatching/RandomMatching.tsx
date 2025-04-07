@@ -1,7 +1,7 @@
 "use client";
 
 import { row1Names, row2Names, row3Names } from "@/constants/team-maker";
-import { useRandomMatching } from "@/hooks/useRandomMathcing";
+import { useRandomMatching } from "@/hooks/useRandomMathching";
 import { getRandomRow, getVisibleRow } from "@/utils/randomRowUtils";
 import { useEffect } from "react";
 
