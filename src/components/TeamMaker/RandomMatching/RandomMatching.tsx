@@ -15,7 +15,7 @@ export default function RandomMatching({ toggle }: { toggle: () => void }) {
   const { stopped, offsets } = useRandomMatching();
 
   useEffect(() => {
-    // 매칭 완료 후 1초 뒤 매칭 성공 모달 렌더링
+    // 매칭 완료 후 0.7초 뒤 매칭 성공 모달 렌더링
     if (stopped) {
       setTimeout(() => {
         toggle();
@@ -28,7 +28,7 @@ export default function RandomMatching({ toggle }: { toggle: () => void }) {
   );
 
   return (
-    <div className="flex flex-col items-center justify-center pt-[120px]">
+    <div className="w-screen flex flex-col items-center justify-center pt-[120px]">
       <div className="flex flex-col items-center mb-[91px]">
         <span className="w-[121px] h-[53px] text-[24px] font-bold px-4 py-3 mb-3 rounded-[4px] bg-primary">
           팀 메이커
@@ -44,13 +44,13 @@ export default function RandomMatching({ toggle }: { toggle: () => void }) {
         </p>
       </div>
 
-      <div className="mb-[243px]">
+      <div className="w-screen mb-[243px]">
         {visibleRows.map((row, rowIndex) => (
           <div key={rowIndex} className="flex justify-center min-h-[106px]">
             {row.map((name, idx) => (
               <div
                 key={`${rowIndex}-${idx}`}
-                className={`px-[47px] py-[32px] text-[32px] font-semibold text-white leading-10 text-center min-w-[178px] ${
+                className={`w-full px-[47px] py-[32px] text-[32px] font-semibold text-white leading-10 text-center min-w-[178px] ${
                   idx === 3 ? "bg-orange-500" : "bg-gray5"
                 }`}
               >
