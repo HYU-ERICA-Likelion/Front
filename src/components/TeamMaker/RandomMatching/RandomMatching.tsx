@@ -3,6 +3,7 @@
 import { row1Names, row2Names, row3Names } from "@/constants/team-maker";
 import { useRandomMatching } from "@/hooks/useRandomMathcing";
 import { getRandomRow, getVisibleRow } from "@/utils/randomRowUtils";
+import { useEffect } from "react";
 
 export default function RandomMatching({ toggle }: { toggle: () => void }) {
   const initialRows = [
@@ -11,9 +12,20 @@ export default function RandomMatching({ toggle }: { toggle: () => void }) {
     getRandomRow(row3Names),
   ];
 
-  const { rows, offsets } = useRandomMatching(initialRows, toggle);
+  const { stopped, offsets } = useRandomMatching();
 
-  const visibleRows = rows.map((row, i) => getVisibleRow(row, offsets[i]));
+  useEffect(() => {
+    // 매칭 완료 후 1초 뒤 매칭 성공 모달 렌더링
+    if (stopped) {
+      setTimeout(() => {
+        toggle();
+      }, 700);
+    }
+  }, [stopped]);
+
+  const visibleRows = initialRows.map((row, i) =>
+    getVisibleRow(row, offsets[i])
+  );
 
   return (
     <div className="flex flex-col items-center justify-center pt-[120px]">

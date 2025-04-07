@@ -1,12 +1,6 @@
 import { useEffect, useState } from "react";
 
-export function useRandomMatching(
-  initialRows: string[][],
-  toggle: () => void,
-  duration: number = 3000,
-  delay: number = 1000
-) {
-  const [rows, setRows] = useState<string[][]>(initialRows);
+export function useRandomMatching() {
   const [offsets, setOffsets] = useState([0, 0, 0]);
   const [stopped, setStopped] = useState(false);
 
@@ -20,18 +14,13 @@ export function useRandomMatching(
     const stopTimeout = setTimeout(() => {
       clearInterval(interval);
       setStopped(true);
-
-      // `delay` 뒤에 toggle() 실행
-      setTimeout(() => {
-        toggle();
-      }, delay);
-    }, duration);
+    }, 3000);
 
     return () => {
       clearInterval(interval);
       clearTimeout(stopTimeout);
     };
-  }, [stopped, toggle, duration, delay]);
+  }, [stopped]);
 
-  return { rows, offsets, stopped };
+  return { offsets, stopped };
 }
