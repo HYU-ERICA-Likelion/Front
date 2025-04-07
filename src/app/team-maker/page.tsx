@@ -66,7 +66,7 @@ export default function TeamMakerPage() {
         <button
           className="flex justify-center items-center rounded-[20px] font-bold text-white tracking-[-0.5%] bg-primary
                      tablet:gap-[10px] tablet:w-[211px] tablet:h-[62px] tablet:text-[32px]"
-          onClick={() => router.push("/team-maker/matching-result")}
+          onClick={() => router.push("/team-maker/random-matching")}
         >
           매칭하기
           <Image
