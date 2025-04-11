@@ -1,7 +1,7 @@
 interface TeamDTO {
-  design: number;
-  frontend: number;
-  backend: number;
+  design: number | string;
+  frontend: number | string;
+  backend: number | string;
 }
 
 interface TeamSetupFormProps {
