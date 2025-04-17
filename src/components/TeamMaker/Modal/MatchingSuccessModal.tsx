@@ -20,7 +20,7 @@ export default function MatchiingSuccessModal({
   const [hasMounted, setHasMounted] = useState<boolean>(false); // 처음 열렸는지 여부
   const [isRoutingToHome, setIsRoutingToHome] = useState<boolean>(false); // 홈으로 이동 클릭 여부
 
-  // 모달 ON/OFF 로직
+  // 모달 ON/OFF 및 라우팅 분기
   useEffect(() => {
     // 처음 열렸을 때
     if (!hasMounted && isOpen) {

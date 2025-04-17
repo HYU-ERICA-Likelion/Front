@@ -30,6 +30,7 @@ export default function MatchingResultCarousel({
 
   // 홈 이동 및 다음 팀 매칭보기 버튼 핸들러
   const handleRoutingToHome = () => {
+    // 마지막 팀 매칭 결과일 때
     if (currIdx === teamData.length - 1) {
       setIsRoutingToHome(true);
       toggle();

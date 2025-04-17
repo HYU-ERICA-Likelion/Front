@@ -1,25 +1,25 @@
 "use client";
 
-import { row1Names, row2Names, row3Names } from "@/constants/team-maker";
+import { DESIGN, FRONTEND, BACKEND } from "@/constants/team-maker";
 import { useRandomMatching } from "@/hooks/useRandomMathching";
 import { getRandomRow, getVisibleRow } from "@/utils/randomRowUtils";
 import { useEffect } from "react";
 
 export default function RandomMatching({ toggle }: { toggle: () => void }) {
   const initialRows = [
-    getRandomRow(row1Names),
-    getRandomRow(row2Names),
-    getRandomRow(row3Names),
+    getRandomRow(DESIGN),
+    getRandomRow(FRONTEND),
+    getRandomRow(BACKEND),
   ];
 
   const { stopped, offsets } = useRandomMatching();
 
   useEffect(() => {
-    // 매칭 완료 후 0.7초 뒤 매칭 성공 모달 렌더링
+    // 매칭 완료 후 0.6초 뒤 매칭 성공 모달 렌더링
     if (stopped) {
       setTimeout(() => {
         toggle();
-      }, 700);
+      }, 600);
     }
   }, [stopped]);
 
