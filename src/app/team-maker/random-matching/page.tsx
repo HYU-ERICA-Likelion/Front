@@ -7,6 +7,7 @@ import { useSearchParams } from "next/navigation";
 
 export default function RandomMatchingPage() {
   const { isOpen, toggle } = useToggle();
+
   const searchParams = useSearchParams().get("result"); // 쿼리에서 result 값 가져오기
   const resultData = JSON.parse(decodeURIComponent(searchParams)); // 디코딩
 
