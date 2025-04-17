@@ -3,14 +3,14 @@
 import { useState } from "react";
 import MatchingIntro from "@/components/TeamMaker/MatchingIntro";
 import TeamSetupForm from "@/components/TeamMaker/TeamSetupForm";
-import { TeamDTO } from "@/types/team-maker";
+import { TeamDTORequest } from "@/types/team-maker";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 export default function TeamMakerPage() {
   const router = useRouter();
 
-  const [teamList, setTeamList] = useState<TeamDTO[]>([
+  const [teamList, setTeamList] = useState<TeamDTORequest[]>([
     {
       design: 0,
       frontend: 0,
@@ -27,6 +27,29 @@ export default function TeamMakerPage() {
         backend: 0,
       },
     ]);
+  };
+
+  const handleSubmit = async () => {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL_KEY}/teams`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        teamList,
+      }),
+    });
+
+    if (!res.ok) {
+      console.error("랜덤 매칭 요청 실패");
+      alert("랜덤 매칭에 실패했습니다. 다시 시도해주세요.");
+      return;
+    }
+
+    const { teamDtoList } = await res.json();
+    const encodedData = encodeURIComponent(JSON.stringify(teamDtoList)); // 데이터 인코딩
+
+    router.replace(`/team-maker/random-matching?result=${encodedData}`); // 쿼리로 전달
   };
 
   return (
@@ -66,7 +89,7 @@ export default function TeamMakerPage() {
         <button
           className="flex justify-center items-center rounded-[20px] font-bold text-white tracking-[-0.5%] bg-primary
                      tablet:gap-[10px] tablet:w-[211px] tablet:h-[62px] tablet:text-[32px]"
-          onClick={() => router.push("/team-maker/random-matching")}
+          onClick={handleSubmit}
         >
           매칭하기
           <Image
