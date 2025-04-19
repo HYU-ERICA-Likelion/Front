@@ -1,25 +1,43 @@
-import { useRouter } from "next/navigation";
 import { useState } from "react";
 import clsx from "clsx";
 import Arrow from "@/assets/common/arrow.svg";
-import { TeamDTO } from "@/types/team-maker";
+import { TeamDTOFormatted, TeamDTOResponse } from "@/types/team-maker";
+import { translateRoleName } from "@/utils";
+import { formatTeamDTO } from "@/utils/formatTeamDTO";
 
 export default function MatchingResultCarousel({
   teamData,
+  toggle,
+  setIsRoutingToHome,
 }: {
-  teamData: TeamDTO[];
+  teamData: TeamDTOResponse[];
+  toggle: () => void;
+  setIsRoutingToHome: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
-  const router = useRouter();
-
   const [currIdx, setCurrIdx] = useState<number>(0);
 
+  // 팀 데이터 포맷팅
+  const formattedData: TeamDTOFormatted[][] = formatTeamDTO(teamData);
+
+  // 캐러셀 이동 핸들러
   const handleClickPrevBtn = () => {
     setCurrIdx((prev) => prev - 1);
   };
-
   const handleClickNextBtn = () => {
-    if (currIdx === teamData.length - 1) return;
+    // 다음 팀 매칭 결과로 이동
     setCurrIdx((prev) => prev + 1);
+  };
+
+  // 홈 이동 및 다음 팀 매칭보기 버튼 핸들러
+  const handleRoutingToHome = () => {
+    // 마지막 팀 매칭 결과일 때
+    if (currIdx === teamData.length - 1) {
+      setIsRoutingToHome(true);
+      toggle();
+      return;
+    }
+
+    handleClickNextBtn(); // 마지막 팀이 아닐 때 다음 팀 매칭 결과로 이동
   };
 
   return (
@@ -41,26 +59,22 @@ export default function MatchingResultCarousel({
         </button>
 
         {/* 팀 매칭 결과 */}
-        <div className="flex flex-col justify-center items-center gap-10 w-[341px] h-[246px] bg-[#d9d9d9]">
+        <div className="flex flex-col justify-center items-center gap-10 w-[341px] h-fit py-10 bg-[#d9d9d9]">
           <strong className="text-[24px] font-semibold text-black">
             {currIdx + 1}팀
           </strong>
           <ul className="flex flex-col gap-[12px]">
-            {["프론트엔드", "기획&디자인", "백엔드"].map((role, idx) => (
-              <li key={idx} className="flex gap-[66px]">
+            {formattedData[currIdx].map((data, idx) => (
+              <li
+                key={`${currIdx + 1}-team-${idx}`}
+                className="flex gap-[66px]"
+              >
                 <strong className="w-[99px] text-[20px] font-bold leading-[26px] text-black">
-                  {role}
+                  {translateRoleName(data.role)}
                 </strong>
+
                 <span className="text-[20px] font-semibold leading-[26px] text-[#414141]">
-                  {
-                    teamData[currIdx][
-                      role === "프론트엔드"
-                        ? "frontend"
-                        : role === "백엔드"
-                        ? "backend"
-                        : "design"
-                    ]
-                  }
+                  {data.name}
                 </span>
               </li>
             ))}
@@ -85,18 +99,20 @@ export default function MatchingResultCarousel({
       </div>
 
       {/* button group */}
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col items-center gap-6">
         <button
           type="submit"
-          className="w-[194px] h-[61px] rounded-[40px] text-[24px] font-bold text-white bg-primary"
-          onClick={handleClickNextBtn}
+          className="min-w-[194px] w-fit h-[61px] px-8 rounded-[40px] text-[24px] font-bold text-white bg-primary"
+          onClick={handleRoutingToHome}
         >
-          {currIdx + 2}팀 매칭보기
+          {currIdx === teamData.length - 1
+            ? "멋사 홈으로 돌아가기"
+            : `${currIdx + 2}팀 매칭보기`}
         </button>
         <button
           type="submit"
           className="w-[194px] h-[61px] rounded-[40px] text-[24px] font-bold text-white bg-[#595959]"
-          onClick={() => router.replace("/team-maker")}
+          onClick={() => toggle()}
         >
           다시 매칭하기
         </button>
