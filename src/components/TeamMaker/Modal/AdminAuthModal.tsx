@@ -2,7 +2,8 @@
 
 import Modal from "@/components/Common/Modal";
 import CloseIcon from "@/assets/common/close.svg";
-import { useEffect, useState } from "react";
+import { useActionState, useEffect, useState } from "react";
+import { adminAuth } from "@/actions";
 
 interface IAdminAuthModalProps {
   isOpen: boolean;
@@ -13,15 +14,24 @@ export default function AdminAuthModal({
   isOpen,
   toggle,
 }: IAdminAuthModalProps) {
-  const [inputValue, setInputValue] = useState<string>("");
+  const [state, formAction, isPending] = useActionState(adminAuth, "");
+  const [code, setCode] = useState<string>("");
 
-  const handleChange = (e) => {
-    setInputValue(e.target.value);
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setCode(e.target.value);
   };
 
   useEffect(() => {
-    if (!isOpen) setInputValue("");
+    console.log(state);
+  }, [state]);
+
+  useEffect(() => {
+    if (!isOpen) setCode("");
   }, [isOpen]);
+
+  // useEffect(() => {
+  //   toggle();
+  // }, [isOpen]);
 
   return (
     <Modal isOpen={isOpen} toggle={toggle}>
@@ -33,13 +43,17 @@ export default function AdminAuthModal({
           <CloseIcon />
         </button>
 
-        <form className="flex flex-col items-center w-[431px]">
+        <form
+          className="flex flex-col items-center w-[431px]"
+          action={formAction}
+        >
           <h2 className="w-full h-[38px] mb-[28px] text-[32px] text-center font-bold text-black">
             비밀번호 입력 창
           </h2>
           <input
+            name="code"
             type="password"
-            value={inputValue}
+            value={code}
             onChange={handleChange}
             placeholder="비밀번호를 입력해주세요"
             className="w-full h-[54px] mb-[8px] border border-solid border-subWhite rounded-[7px] placeholder:font-bold
